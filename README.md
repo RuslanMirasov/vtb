@@ -1,3 +1,3 @@
-# President website
+# ВТБ website
 
 ![Project Preview](./public/poster.webp)
