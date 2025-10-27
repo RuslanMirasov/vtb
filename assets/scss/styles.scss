@@ -1,0 +1,15 @@
+:root {
+  --font: "vtb", sans-serif;
+
+  --bg: #0024b3;
+  --color: #ffffff;
+  --white: #ffffff;
+  --black: #000000;
+  --red: #e62632;
+  --invalid: #ff0000;
+}
+
+@import "mixins";
+@import "fonts";
+@import "reset";
+@import "swiper";
