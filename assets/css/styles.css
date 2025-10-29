@@ -123,7 +123,6 @@ a[aria-current=page] {
 .main {
   opacity: 1;
   transition: opacity 0.5s;
-  padding: 0px 20px;
 }
 .main.hidden {
   opacity: 0;
@@ -772,6 +771,8 @@ hr {
 }
 
 .section--hero {
+  display: flex;
+  flex-direction: column;
   min-height: 100svh;
   transform: scale(0);
 }
@@ -788,6 +789,20 @@ hr {
 
 .loaded .section--hero {
   transform: scale(1);
+}
+
+.foue {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: calc(100svh - 150px);
+  margin-top: -78px;
+}
+.foue img {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 .section--wardrobe .titles {

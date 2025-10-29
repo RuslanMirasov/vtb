@@ -1,4 +1,6 @@
 .section--hero {
+  display: flex;
+  flex-direction: column;
   min-height: 100svh;
   transform: scale(0);
   &.show {
@@ -16,5 +18,20 @@
 .loaded {
   .section--hero {
     transform: scale(1);
+  }
+}
+
+.foue {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: calc(100svh - 150px);
+  margin-top: -78px;
+
+  img {
+    display: block;
+    width: auto;
+    height: 100%;
   }
 }
