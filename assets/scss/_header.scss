@@ -8,12 +8,20 @@
   top: 0px;
   background: var(--blue) url('../img/header/nav-bg.webp') no-repeat center center/cover;
   z-index: 0;
-  transition: transform 1s;
+  transition: transform 0.7s;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) translate(0px, 0px);
 
   &.scaleble {
-    transform: scale(0);
+    transform: scale(0) translate(0px, 0px);
+  }
+
+  &.move {
+    transform: scale(1) translate(0px, myclamp(50px, 60px, 1440px, 1440px));
+  }
+
+  @media (max-width: 767px) {
+    background: var(--blue) url('../img/header/nav-bg-mobil.webp') no-repeat center center/cover;
   }
 }
 
@@ -127,7 +135,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: var(--bg) url('../img/header/nav-bg.webp') no-repeat center center/cover;
+  //background: var(--bg) url('../img/header/nav-bg.webp') no-repeat center center/cover;
   z-index: 19;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -233,7 +241,7 @@
   width: auto;
   height: calc(100% - myclamp(50px, 60px, 1440px, 1440px));
   top: myclamp(50px, 60px, 1440px, 1440px);
-  transition: transform 0.5s ease-in-out 0s;
+  transition: transform 0.5s ease-in-out 0s, opacity 0.5s;
   z-index: 18;
   pointer-events: none;
   img {
@@ -259,7 +267,7 @@
 
 .loaded {
   .column {
-    transition: transform 0.5s ease-out 0.5s;
+    transition: transform 0.5s ease-out 0.5s, opacity 0.5s;
     &.column--left {
       transform: translate(0%, 0%);
       &.in-main-page {
@@ -272,6 +280,10 @@
       &.in-main-page {
         transform: translate(40%, 0%);
       }
+    }
+
+    &.hidden {
+      opacity: 0;
     }
   }
 }

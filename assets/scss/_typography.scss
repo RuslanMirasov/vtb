@@ -16,6 +16,7 @@
 
 .title {
   display: block;
+  text-align: center;
 
   &.title--h1 {
     font-size: myclamp(28px, 40px, 1440px, 1440px);
@@ -40,7 +41,8 @@
 }
 
 .ta--l {
-  .subtitle {
+  .subtitle,
+  .title {
     text-align: left;
   }
 }

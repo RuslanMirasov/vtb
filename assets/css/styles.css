@@ -120,6 +120,15 @@ a[aria-current=page] {
   pointer-events: none;
 }
 
+.main {
+  opacity: 1;
+  transition: opacity 0.5s;
+  padding: 0px 20px;
+}
+.main.hidden {
+  opacity: 0;
+}
+
 .section {
   position: relative;
   overflow: hidden;
@@ -133,12 +142,14 @@ a[aria-current=page] {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 1280px;
-  padding: 0px 20px;
+  max-width: 1240px;
 }
 
 .loaded .section {
   opacity: 1;
+}
+.loaded .section.hidden {
+  opacity: 0;
 }
 
 hr {
@@ -241,12 +252,20 @@ hr {
   top: 0px;
   background: var(--blue) url("../img/header/nav-bg.webp") no-repeat center center/cover;
   z-index: 0;
-  transition: transform 1s;
+  transition: transform 0.7s;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) translate(0px, 0px);
 }
 .fixed-background.scaleble {
-  transform: scale(0);
+  transform: scale(0) translate(0px, 0px);
+}
+.fixed-background.move {
+  transform: scale(1) translate(0px, clamp(50px, 4.1667vw, 60px));
+}
+@media (max-width: 767px) {
+  .fixed-background {
+    background: var(--blue) url("../img/header/nav-bg-mobil.webp") no-repeat center center/cover;
+  }
 }
 
 .header {
@@ -349,7 +368,6 @@ hr {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: var(--bg) url("../img/header/nav-bg.webp") no-repeat center center/cover;
   z-index: 19;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -447,7 +465,7 @@ hr {
   width: auto;
   height: calc(100% - clamp(50px, 4.1667vw, 60px));
   top: clamp(50px, 4.1667vw, 60px);
-  transition: transform 0.5s ease-in-out 0s;
+  transition: transform 0.5s ease-in-out 0s, opacity 0.5s;
   z-index: 18;
   pointer-events: none;
 }
@@ -472,7 +490,7 @@ hr {
 }
 
 .loaded .column {
-  transition: transform 0.5s ease-out 0.5s;
+  transition: transform 0.5s ease-out 0.5s, opacity 0.5s;
 }
 .loaded .column.column--left {
   transform: translate(0%, 0%);
@@ -485,6 +503,9 @@ hr {
 }
 .loaded .column.column--right.in-main-page {
   transform: translate(40%, 0%);
+}
+.loaded .column.hidden {
+  opacity: 0;
 }
 
 .titles {
@@ -505,6 +526,7 @@ hr {
 
 .title {
   display: block;
+  text-align: center;
 }
 .title.title--h1 {
   font-size: clamp(28px, 2.7778vw, 40px);
@@ -525,7 +547,8 @@ hr {
   font-size: 16px;
 }
 
-.ta--l .subtitle {
+.ta--l .subtitle,
+.ta--l .title {
   text-align: left;
 }
 
