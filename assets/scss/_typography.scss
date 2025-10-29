@@ -1,0 +1,46 @@
+.titles {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  &.ta--l {
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+}
+
+.title {
+  display: block;
+
+  &.title--h1 {
+    font-size: myclamp(28px, 40px, 1440px, 1440px);
+  }
+
+  &.title--h2 {
+    font-size: myclamp(38px, 38px, 1440px, 1440px);
+  }
+
+  &.title--h3 {
+    font-size: myclamp(28px, 28px, 1440px, 1440px);
+  }
+}
+
+.subtitle {
+  font-size: myclamp(16px, 18px, 1440px, 1440px);
+  line-height: 1.4;
+  text-align: center;
+  &.subtitle--16 {
+    font-size: 16px;
+  }
+}
+
+.ta--l {
+  .subtitle {
+    text-align: left;
+  }
+}

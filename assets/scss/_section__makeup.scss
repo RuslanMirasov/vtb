@@ -1,0 +1,8 @@
+.section--makeup {
+  .titles {
+    margin-top: myclamp(16px, 32px, 1440px, 1440px);
+    .subtitle {
+      max-width: 610px;
+    }
+  }
+}

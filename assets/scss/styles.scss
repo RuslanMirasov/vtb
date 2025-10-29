@@ -2,6 +2,7 @@
   --font: "vtb", sans-serif;
 
   --bg: #0024b3;
+  --blue: #0a2896;
   --color: #ffffff;
   --white: #ffffff;
   --black: #000000;
@@ -12,4 +13,11 @@
 @import "mixins";
 @import "fonts";
 @import "reset";
+@import "preloader";
+@import "header";
+@import "typography";
+@import "buttons";
 @import "swiper";
+@import "section__hero";
+@import "section__wardrobe";
+@import "section__makeup";
