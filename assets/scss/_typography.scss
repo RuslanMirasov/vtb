@@ -12,22 +12,26 @@
     align-items: flex-start;
     align-content: flex-start;
   }
+  @media (max-width: 599px) {
+    gap: 12px;
+  }
 }
 
 .title {
   display: block;
   text-align: center;
+  line-height: 1.2;
 
   &.title--h1 {
     font-size: myclamp(28px, 40px, 1440px, 1440px);
   }
 
   &.title--h2 {
-    font-size: myclamp(38px, 38px, 1440px, 1440px);
+    font-size: 38px;
   }
 
   &.title--h3 {
-    font-size: myclamp(28px, 28px, 1440px, 1440px);
+    font-size: 28px;
   }
 }
 

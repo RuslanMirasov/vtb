@@ -360,20 +360,20 @@ hr {
   position: fixed;
   left: 0px;
   top: 0px;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr auto;
   width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  height: 100svh;
   z-index: 19;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: clamp(50px, 4.1667vw, 60px) 0px clamp(20px, 2.0833vw, 30px) 0px;
   transition: 0.5s;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .navigation.open {
   opacity: 1;
@@ -392,6 +392,19 @@ hr {
   align-content: flex-start;
   gap: 40px 26px;
   text-align: center;
+  margin: auto;
+  padding: clamp(50px, 5.5556vw, 80px) 0px;
+}
+@media (max-width: 1023px) {
+  .menu {
+    gap: 20px;
+    max-width: 400px;
+  }
+}
+@media (max-width: 767px) {
+  .menu {
+    max-width: 320px;
+  }
 }
 .menu:before, .menu:after {
   content: "";
@@ -404,18 +417,30 @@ hr {
   pointer-events: none;
 }
 .menu:before {
-  bottom: calc(100% + 20px);
+  bottom: calc(100% - clamp(50px, 4.1667vw, 60px));
 }
 .menu:after {
-  top: calc(100% + 20px);
+  top: calc(100% - clamp(50px, 4.1667vw, 60px));
 }
 .menu li {
   width: calc((100% - 78px) / 3);
+  order: 1;
+}
+.menu li:last-child {
+  order: 4;
+}
+@media (max-width: 1023px) {
+  .menu li {
+    width: calc((100% - 20px) / 2);
+  }
+  .menu li:nth-child(4) {
+    order: 3;
+  }
 }
 .menu li a {
   display: flex;
   position: relative;
-  width: 315px;
+  width: clamp(150px, 21.875vw, 315px);
   left: 50%;
   transform: translate(-50%, 0%);
   flex-direction: column;
@@ -423,25 +448,31 @@ hr {
   align-items: center;
   align-content: center;
   text-align: center;
-  gap: 14px;
+  gap: clamp(10px, 0.9722vw, 14px);
 }
 .menu li img {
   position: relative;
-  width: 128px;
-  height: 110px;
+  width: clamp(100px, 8.8889vw, 128px);
+  height: clamp(70px, 7.6389vw, 110px);
   margin: 0 auto;
   transform: scale(1);
   transition: 0.6s;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .menu li b {
-  white-space: nowrap;
-  font-size: 28px;
+  font-size: clamp(18px, 1.9444vw, 28px);
   font-weight: 500;
 }
+@media (min-width: 768px) {
+  .menu li b {
+    white-space: nowrap;
+  }
+}
 .menu li p {
-  max-width: 210px;
+  max-width: clamp(150px, 14.5833vw, 210px);
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(12px, 1.1111vw, 16px);
   line-height: 1.4;
 }
 @media (hover: hover) {
@@ -451,12 +482,13 @@ hr {
 }
 
 .map-link {
+  display: inline-block;
+  position: relative;
   font-size: 20px;
   line-height: 1;
   font-weight: 500;
-  display: block;
-  position: absolute;
-  bottom: 60px;
+  align-self: end;
+  justify-self: center;
 }
 
 .column {
@@ -522,19 +554,25 @@ hr {
   align-items: flex-start;
   align-content: flex-start;
 }
+@media (max-width: 599px) {
+  .titles {
+    gap: 12px;
+  }
+}
 
 .title {
   display: block;
   text-align: center;
+  line-height: 1.2;
 }
 .title.title--h1 {
   font-size: clamp(28px, 2.7778vw, 40px);
 }
 .title.title--h2 {
-  font-size: clamp(38px, 2.6389vw, 38px);
+  font-size: 38px;
 }
 .title.title--h3 {
-  font-size: clamp(28px, 1.9444vw, 28px);
+  font-size: 28px;
 }
 
 .subtitle {
@@ -781,10 +819,28 @@ hr {
   transform: scale(1);
 }
 .section--hero .titles {
-  margin-top: clamp(16px, 2.2222vw, 32px);
+  padding-top: 32px;
 }
 .section--hero .titles .subtitle {
   max-width: 490px;
+}
+@media (max-width: 1279px) {
+  .section--hero .titles .title {
+    max-width: 500px;
+  }
+}
+@media (max-width: 599px) {
+  .section--hero .titles {
+    padding-top: 20px;
+  }
+  .section--hero .titles .subtitle {
+    max-width: 330px;
+  }
+}
+@media (max-height: 639px) and (max-width: 599px) {
+  .section--hero .titles {
+    margin-bottom: 26px;
+  }
 }
 
 .loaded .section--hero {
@@ -793,18 +849,146 @@ hr {
 
 .foue {
   display: flex;
-  justify-content: center;
   position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
   width: 100%;
-  height: calc(100svh - 150px);
-  margin-top: -78px;
+  flex: 1;
+  overflow: hidden;
+  margin-top: -88px;
 }
-.foue img {
-  display: block;
-  width: auto;
-  height: 100%;
+.foue .scroll-area {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+  position: absolute;
+  overflow-x: scroll;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  margin-bottom: -20px;
+  flex: 1;
+}
+.foue .scroll-area .foue__navigation {
+  display: inline-flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+  height: calc(103.7svh - 180px);
+  margin: 0px auto;
+}
+.foue .scroll-area .foue__navigation .foue-image {
+  height: calc(103.7svh - 180px);
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: auto;
 }
 
+.door {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 7.6388%;
+  height: 51.9736%;
+  left: 0px;
+  bottom: 13.3223%;
+}
+.door.door--director {
+  left: 10.6%;
+}
+.door.door--buffet {
+  left: 21.1%;
+}
+.door.door--makeup {
+  left: 31.6%;
+}
+.door.door--stage {
+  width: 13.2%;
+  left: 43.4%;
+}
+.door.door--wardrobe {
+  left: 60.7%;
+}
+.door.door--orchestra {
+  left: 70.92%;
+}
+.door.door--secret {
+  left: 82.5%;
+  height: 54%;
+  bottom: 12%;
+}
+
+.key {
+  position: absolute;
+  pointer-events: none;
+  bottom: 33%;
+  left: 80.5%;
+  width: 4.3055%;
+}
+
+.select-a-play {
+  position: fixed;
+  right: clamp(8px, 3.6111vw, 52px);
+  bottom: clamp(8px, 2.0833vw, 30px);
+  width: clamp(60px, 8.3333vw, 120px);
+  height: clamp(60px, 8.3333vw, 120px);
+  border-radius: 120px;
+  background: var(--red);
+  z-index: 20;
+  transition: 1s;
+  transform: translate(0%, 140%);
+  opacity: 0;
+}
+.select-a-play img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.select-a-play img.select-a-play__text {
+  -webkit-animation: spin 5s linear infinite;
+          animation: spin 5s linear infinite;
+}
+@media (max-width: 414px) {
+  .select-a-play {
+    right: 8px;
+    bottom: 8px;
+  }
+}
+
+.loaded .select-a-play {
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+.loaded .select-a-play.hidden {
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
 .section--wardrobe .titles {
   margin-top: clamp(16px, 2.2222vw, 32px);
 }

@@ -1,9 +1,6 @@
-import {
-  initNavigationMenu,
-  hidePreloader,
-  initLinksMiddleware,
-} from "./helpers.js";
+import { initNavigationMenu, hidePreloader, initLinksMiddleware, initScrollArea } from './helpers.js';
 
-hidePreloader();
+initScrollArea();
 initNavigationMenu();
 initLinksMiddleware();
+hidePreloader();
