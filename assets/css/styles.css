@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --font: "vtb", sans-serif;
   --bg: #0024b3;
@@ -675,24 +676,6 @@ hr {
     transform: translate(300px, -50%) rotate(25deg);
   }
 }
-.slider-arrows {
-  display: inline-flex;
-  gap: 12px;
-  padding-bottom: 10px;
-  justify-content: space-between;
-}
-@media (max-width: 1279px) {
-  .slider-arrows {
-    gap: 10px;
-    padding-bottom: 8px;
-  }
-}
-@media (max-width: 767px) {
-  .slider-arrows {
-    display: none;
-  }
-}
-
 .swiper {
   width: 100%;
 }
@@ -700,114 +683,136 @@ hr {
 .swiper-arrow {
   display: flex;
   position: absolute;
-  width: 42px;
-  height: 42px;
+  width: clamp(32px, 3.1944vw, 82px);
+  height: clamp(32px, 3.1944vw, 82px);
   border: none;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   opacity: 1;
   transition: opacity 0.3s;
-  z-index: 3;
-  margin-top: -35px;
-  top: 50%;
+  z-index: 19;
+  overflow: hidden;
+  border-radius: 46px;
+  background: url("../img/header/bg.webp") no-repeat center center/cover;
 }
-.swiper-arrow[data-arrow-prev] {
-  background: url("../img/svg/arrow-prev.svg") no-repeat center center;
-  background-size: auto 100%;
-  right: calc(100% + 14px);
+.swiper-arrow:before {
+  content: "";
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.6s;
 }
-.swiper-arrow[data-arrow-next] {
-  background: url("../img/svg/arrow-next.svg") no-repeat center center;
-  background-size: auto 100%;
-  left: calc(100% + 14px);
+.swiper-arrow[data-arrow-prev]:before {
+  background: url("../img/svg/arrow-prev.svg") no-repeat center center/cover;
+  -webkit-animation: arrowPrevAnim 4s ease-in-out infinite;
+          animation: arrowPrevAnim 4s ease-in-out infinite;
+}
+.swiper-arrow[data-arrow-next]:before {
+  background: url("../img/svg/arrow-next.svg") no-repeat center center/cover;
+  -webkit-animation: arrowNextAnim 4s ease-in-out infinite;
+          animation: arrowNextAnim 4s ease-in-out infinite;
 }
 .swiper-arrow.swiper-button-disabled {
   opacity: 0.3;
   pointer-events: none;
 }
 
-.swiper-pagination {
-  display: flex;
-  position: relative;
-  width: 100% !important;
-  height: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  bottom: 0px !important;
-  gap: 20px;
+/* Анимации для стрелок */
+@-webkit-keyframes arrowPrevAnim {
+  0%, 30% {
+    transform: translate(0%, 0%);
+  }
+  40% {
+    transform: translate(-54%, 0%);
+  }
+  45% {
+    transform: translate(-46%, 0%);
+  }
+  50% {
+    transform: translate(-52%, 0%);
+  }
+  55% {
+    transform: translate(-49%, 0%);
+  }
+  60% {
+    transform: translate(-51%, 0%);
+  }
+  65%, 100% {
+    transform: translate(-50%, 0%);
+  }
 }
-.swiper-pagination .swiper-pagination-bullet {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  position: absolute;
-  left: 50% !important;
-  transform: scale(1) translate(-50%, 0%);
-  margin: 0 !important;
-  opacity: 0;
-  width: 40px;
-  height: 20px;
-  border-radius: 0px;
-  background: none;
-  transition: 0.6s !important;
-  pointer-events: none;
+@keyframes arrowPrevAnim {
+  0%, 30% {
+    transform: translate(0%, 0%);
+  }
+  40% {
+    transform: translate(-54%, 0%);
+  }
+  45% {
+    transform: translate(-46%, 0%);
+  }
+  50% {
+    transform: translate(-52%, 0%);
+  }
+  55% {
+    transform: translate(-49%, 0%);
+  }
+  60% {
+    transform: translate(-51%, 0%);
+  }
+  65%, 100% {
+    transform: translate(-50%, 0%);
+  }
 }
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active-next-next {
-  position: absolute;
-  transform: scale(1);
-  left: 50% !important;
-  opacity: 0;
-  transform: translate(calc(200% + 20px), 0%);
+@-webkit-keyframes arrowNextAnim {
+  0%, 30% {
+    transform: translate(-50%, 0%);
+  }
+  40% {
+    transform: translate(4%, 0%);
+  }
+  45% {
+    transform: translate(-4%, 0%);
+  }
+  50% {
+    transform: translate(2%, 0%);
+  }
+  55% {
+    transform: translate(-1%, 0%);
+  }
+  60% {
+    transform: translate(1%, 0%);
+  }
+  65%, 100% {
+    transform: translate(0%, 0%);
+  }
 }
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active-prev-prev {
-  position: absolute;
-  transform: scale(1);
-  left: 50% !important;
-  opacity: 0;
-  transform: translate(calc(-300% - 20px), 0%);
+@keyframes arrowNextAnim {
+  0%, 30% {
+    transform: translate(-50%, 0%);
+  }
+  40% {
+    transform: translate(4%, 0%);
+  }
+  45% {
+    transform: translate(-4%, 0%);
+  }
+  50% {
+    transform: translate(2%, 0%);
+  }
+  55% {
+    transform: translate(-1%, 0%);
+  }
+  60% {
+    transform: translate(1%, 0%);
+  }
+  65%, 100% {
+    transform: translate(0%, 0%);
+  }
 }
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active-main {
-  position: absolute;
-  transform: scale(1);
-  left: 50% !important;
-  opacity: 1;
-  transform: translate(-50%, 0%);
-}
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active-next {
-  position: absolute;
-  transform: scale(1);
-  left: 50% !important;
-  opacity: 0.3;
-  transform: translate(100%, 0%);
-  pointer-events: all;
-}
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active-prev {
-  position: absolute;
-  transform: scale(1);
-  left: 50% !important;
-  opacity: 0.3;
-  transform: translate(-200%, 0%);
-  pointer-events: all;
-}
-.swiper-pagination .swiper-pagination-bullet:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--color);
-  opacity: 1;
-  transition: background-color 0.3s, opacity 0.3s;
-}
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
-  background-color: var(--brown);
-}
-
 .section--hero {
   display: flex;
   flex-direction: column;
@@ -1009,6 +1014,12 @@ hr {
   height: clamp(82px, 5.6944vw, 146px);
   background: var(--white) url("../img/header/bg.webp") no-repeat center center/cover;
   z-index: 2;
+}
+.section--stage .swiper-arrow[data-arrow-prev] {
+  left: clamp(4px, 0.8333vw, 21px);
+}
+.section--stage .swiper-arrow[data-arrow-next] {
+  right: clamp(4px, 0.8333vw, 21px);
 }
 
 .swiper--stage {
