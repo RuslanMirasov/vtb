@@ -23,7 +23,7 @@
   line-height: 1.2;
 
   &.title--h1 {
-    font-size: myclamp(28px, 40px, 1440px, 1440px);
+    font-size: myclamp(28px, 40px, 1440px, 2560px);
   }
 
   &.title--h2 {
@@ -36,7 +36,7 @@
 }
 
 .subtitle {
-  font-size: myclamp(16px, 18px, 1440px, 1440px);
+  font-size: myclamp(16px, 18px, 1440px, 2560px);
   line-height: 1.4;
   text-align: center;
   &.subtitle--16 {

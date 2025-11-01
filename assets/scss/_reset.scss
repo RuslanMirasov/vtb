@@ -107,7 +107,7 @@ a {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 1240px;
+  max-width: myclamp(320px, 1200px, 1440px, 2560px);
 }
 
 .loaded {

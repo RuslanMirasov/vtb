@@ -7,13 +7,14 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  padding: 0;
   &:before {
     content: '';
     position: absolute;
     left: 0px;
     bottom: 0px;
     width: 100%;
-    height: myclamp(82px, 82px, 1440px, 1440px);
+    height: myclamp(82px, 82px, 1440px, 2560px);
     background: var(--white) url('../img/header/bg.webp') no-repeat center center/cover;
     z-index: 2;
   }
@@ -45,8 +46,8 @@
   left: 50%;
   transform: translate(-50%, 0%);
   bottom: 82px;
-  width: myclamp(560px, 786px, 1440px, 1800px);
-  height: myclamp(409px, 575px, 1440px, 1800px);
+  width: myclamp(560px, 786px, 1440px, 2560px);
+  height: myclamp(409px, 575px, 1440px, 2560px);
   background: url('../img/circle.webp') no-repeat center center/cover;
   @media (max-width: 767px) {
     bottom: 50px;
@@ -100,10 +101,10 @@
       bottom: 15%;
     }
     &.circle__image--6 {
-      bottom: 48%;
+      bottom: 56%;
       &.active {
         opacity: 1;
-        transform: scale(1.85);
+        transform: scale(1.4);
       }
       @media (max-width: 767px) {
         bottom: 100%;
@@ -127,48 +128,48 @@
   transform: translateX(0%);
 
   &.character--1_1 {
-    width: myclamp(147px, 252px, 1440px, 2000px);
+    width: myclamp(147px, 252px, 1440px, 2560px);
     z-index: 2;
   }
   &.character--1_2 {
-    width: myclamp(165px, 281px, 1440px, 2000px);
+    width: myclamp(165px, 281px, 1440px, 2560px);
   }
   &.character--1_3 {
-    width: myclamp(173px, 296px, 1440px, 2000px);
+    width: myclamp(173px, 296px, 1440px, 2560px);
   }
 
   &.character--2_1 {
-    width: myclamp(140px, 218px, 1440px, 2000px);
+    width: myclamp(140px, 230px, 1440px, 2560px);
   }
 
   &.character--3_1 {
-    width: myclamp(113px, 182px, 1440px, 2000px);
+    width: myclamp(113px, 182px, 1440px, 2560px);
   }
   &.character--3_2 {
-    width: myclamp(180px, 300px, 1440px, 2000px);
+    width: myclamp(180px, 300px, 1440px, 2560px);
   }
   &.character--3_3 {
-    width: myclamp(113px, 192px, 1440px, 2000px);
+    width: myclamp(113px, 192px, 1440px, 2560px);
   }
 
   &.character--4_1 {
-    width: myclamp(155px, 240px, 1440px, 2000px);
+    width: myclamp(155px, 240px, 1440px, 2560px);
     z-index: 2;
   }
   &.character--4_2 {
-    width: myclamp(310px, 500px, 1440px, 2000px);
+    width: myclamp(310px, 500px, 1440px, 2560px);
   }
 
   &.character--5_1 {
-    width: myclamp(130px, 210px, 1440px, 2000px);
+    width: myclamp(130px, 210px, 1440px, 2560px);
     z-index: 2;
   }
   &.character--5_2 {
-    width: myclamp(145px, 250px, 1440px, 2000px);
+    width: myclamp(145px, 250px, 1440px, 2560px);
   }
 
   &.character--6_1 {
-    width: myclamp(280px, 370px, 1440px, 2000px);
+    width: myclamp(280px, 450px, 1440px, 2560px);
   }
 }
 
@@ -228,6 +229,143 @@
     }
     &.character--5_2 {
       transform: translate(0%, 3%);
+    }
+  }
+}
+
+.stage-desctiptions {
+  display: block;
+  position: absolute;
+  height: 100%;
+  z-index: 3;
+  padding-top: 96px;
+  padding-bottom: 12px;
+  pointer-events: none;
+  @media (min-width: 1440px) {
+    padding-top: myclamp(72px, 96px, 1440px, 2000px);
+  }
+  @media (max-width: 1023px) {
+    padding-top: myclamp(72px, 96px, 1024px, 1440px);
+  }
+
+  .button {
+    pointer-events: all;
+  }
+
+  .stage-desctiption {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    @media (min-width: 1440px) {
+      top: myclamp(72px, 96px, 1440px, 2000px);
+      height: calc(100% - myclamp(82px, 106px, 1440px, 2000px));
+    }
+    @media (max-width: 1023px) {
+      top: myclamp(72px, 96px, 1024px, 1440px);
+      height: calc(100% - myclamp(82px, 106px, 1024px, 1440px));
+    }
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 14px;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 3;
+    }
+
+    .description {
+      display: inline-flex;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: myclamp(8px, 32px, 1440px, 2560px);
+      order: 1;
+
+      .subtitle {
+        display: block;
+        text-align: left;
+        margin-top: -8px;
+      }
+    }
+
+    .table {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: myclamp(20px, 30px, 1440px, 2560px);
+      padding: myclamp(8px, 12px, 1440px, 2560px) myclamp(14px, 20px, 1440px, 2560px);
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 100px;
+      order: 2;
+      img {
+        height: myclamp(24px, 36px, 1440px, 2560px);
+      }
+
+      li {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: myclamp(8px, 12px, 1440px, 2560px);
+        white-space: nowrap;
+        font-size: myclamp(14px, 18px, 1440px, 2560px);
+        font-weight: 500;
+        &.time {
+          &:before {
+            content: '';
+            width: myclamp(24px, 36px, 1440px, 2560px);
+            height: myclamp(24px, 36px, 1440px, 2560px);
+            background: url('../img/stage/icon-time.webp') no-repeat center center/cover;
+          }
+        }
+        &.peoples {
+          &:before {
+            content: '';
+            width: myclamp(32px, 48px, 1440px, 2560px);
+            height: myclamp(24px, 36px, 1440px, 2560px);
+            background: url('../img/stage/icon-peoples.webp') no-repeat center center/cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px), (orientation: portrait) {
+  .stage-desctiptions {
+    .stage-desctiption {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+
+      .description {
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        order: 2;
+        flex: 1;
+
+        .subtitle {
+          text-align: center;
+          margin-top: 0px;
+        }
+
+        .button {
+          margin-top: auto;
+          min-width: 200px;
+        }
+      }
     }
   }
 }
