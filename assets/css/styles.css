@@ -994,6 +994,7 @@ hr {
   position: relative;
   width: 100%;
   height: 100svh;
+  min-height: clamp(666px, 49.3056vw, 986px);
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -1014,13 +1015,17 @@ hr {
   width: 100%;
   height: 100%;
 }
-.swiper--stage .swiper-slide .container {
+.swiper--stage .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   align-content: flex-end;
-  padding-bottom: 70px;
-  height: 100%;
+  padding-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .swiper--stage .swiper-slide {
+    padding-bottom: 65px;
+  }
 }
 
 .circle {
@@ -1036,6 +1041,11 @@ hr {
   height: clamp(409px, 39.9306vw, 719px);
   background: url("../img/circle.webp") no-repeat center center/cover;
 }
+@media (max-width: 767px) {
+  .circle {
+    bottom: 50px;
+  }
+}
 
 .circle__head {
   position: absolute;
@@ -1047,6 +1057,11 @@ hr {
   width: 49.36%;
   height: 38.95%;
   background: url("../img/circle-head.webp") no-repeat center center/contain;
+}
+@media (max-width: 767px) {
+  .circle__head {
+    top: 10%;
+  }
 }
 
 .circle__images {
@@ -1076,18 +1091,125 @@ hr {
 }
 .circle__images .circle__image.circle__image--1 {
   width: 70%;
-  bottom: 8%;
+  bottom: 8.6%;
 }
 .circle__images .circle__image.circle__image--5 {
   left: 5%;
   bottom: 15%;
 }
 .circle__images .circle__image.circle__image--6 {
-  bottom: 80%;
+  bottom: 48%;
+}
+.circle__images .circle__image.circle__image--6.active {
+  opacity: 1;
+  transform: scale(1.85);
+}
+@media (max-width: 767px) {
+  .circle__images .circle__image.circle__image--6 {
+    bottom: 100%;
+  }
+  .circle__images .circle__image.circle__image--6.active {
+    opacity: 1;
+    transform: scale(2);
+  }
 }
 .circle__images .circle__image.active {
   opacity: 1;
   transform: scale(1);
+}
+
+.character {
+  display: block;
+  position: relative;
+  transition: 1.3s;
+  transform: translateX(0%);
+}
+.character.character--1_1 {
+  width: clamp(147px, 17.5vw, 350px);
+  z-index: 2;
+}
+.character.character--1_2 {
+  width: clamp(165px, 19.5139vw, 390px);
+}
+.character.character--1_3 {
+  width: clamp(173px, 20.5556vw, 411px);
+}
+.character.character--2_1 {
+  width: clamp(140px, 15.1389vw, 303px);
+}
+.character.character--3_1 {
+  width: clamp(113px, 12.6389vw, 253px);
+}
+.character.character--3_2 {
+  width: clamp(180px, 20.8333vw, 417px);
+}
+.character.character--3_3 {
+  width: clamp(113px, 13.3333vw, 267px);
+}
+.character.character--4_1 {
+  width: clamp(155px, 16.6667vw, 333px);
+  z-index: 2;
+}
+.character.character--4_2 {
+  width: clamp(310px, 34.7222vw, 694px);
+}
+.character.character--5_1 {
+  width: clamp(130px, 14.5833vw, 292px);
+  z-index: 2;
+}
+.character.character--5_2 {
+  width: clamp(145px, 17.3611vw, 347px);
+}
+.character.character--6_1 {
+  width: clamp(280px, 25.6944vw, 514px);
+}
+
+.swiper-slide-prev .character.center {
+  transform: translateX(-100%);
+}
+.swiper-slide-prev .character.right {
+  transform: translateX(-200%);
+}
+
+.swiper-slide-next .character.center {
+  transform: translate(100%, 0%);
+}
+.swiper-slide-next .character.left {
+  transform: translate(200%, 0%);
+}
+
+.swiper-slide-active .character.character--1_1 {
+  transform: translate(35%, 0%);
+}
+.swiper-slide-active .character.character--1_2 {
+  transform: translate(5%, 0%);
+}
+.swiper-slide-active .character.character--1_3 {
+  transform: translate(-18%, 0%);
+}
+.swiper-slide-active .character.character--2_1 {
+  transform: translate(5%, 0%);
+}
+.swiper-slide-active .character.character--3_1 {
+  transform: translate(35%, 0%);
+}
+.swiper-slide-active .character.character--3_2 {
+  transform: translate(8%, 5%);
+}
+.swiper-slide-active .character.character--3_3 {
+  transform: translate(-18%, 0%);
+}
+.swiper-slide-active .character.character--4_1 {
+  transform: translate(28%, 0%);
+}
+.swiper-slide-active .character.character--4_2 {
+  transform: translate(8%, 0%);
+}
+.swiper-slide-active .character.character--5_1 {
+  transform: translate(-5%, 3%);
+}
+.swiper-slide-active .character.character--5_2 {
+  transform: translate(0%, 3%);
 }
 
 .section--wardrobe .titles {
