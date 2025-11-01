@@ -273,14 +273,14 @@
   }
   &.column--left {
     left: 0px;
-    transform: translate(0%, 0%);
+    transform: translate(-2%, 0%);
     &.scaleble {
       transform: translate(-100%, 0%);
     }
   }
   &.column--right {
     right: 0px;
-    transform: translate(0%, 0%);
+    transform: translate(2%, 0%);
     &.scaleble {
       transform: translate(100%, 0%);
     }
@@ -291,14 +291,14 @@
   .column {
     transition: transform 0.5s ease-out 0.5s, opacity 0.5s;
     &.column--left {
-      transform: translate(0%, 0%);
+      transform: translate(-2%, 0%);
       &.in-main-page {
         transform: translate(-40%, 0%);
       }
     }
 
     &.column--right {
-      transform: translate(0%, 0%);
+      transform: translate(2%, 0%);
       &.in-main-page {
         transform: translate(40%, 0%);
       }

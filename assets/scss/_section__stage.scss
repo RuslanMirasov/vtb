@@ -1,0 +1,103 @@
+.section--stage {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: myclamp(82px, 82px, 1440px, 1440px);
+    background: var(--white) url('../img/header/bg.webp') no-repeat center center/cover;
+    z-index: 2;
+  }
+}
+
+.swiper--stage {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      align-content: flex-end;
+      padding-bottom: 70px;
+      height: 100%;
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: 82px;
+  width: myclamp(560px, 786px, 1440px, 1800px);
+  height: myclamp(409px, 575px, 1440px, 1800px);
+  background: url('../img/circle.webp') no-repeat center center/cover;
+}
+
+.circle__head {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: 3%;
+  width: 49.36%;
+  height: 38.95%;
+  background: url('../img/circle-head.webp') no-repeat center center/contain;
+}
+
+.circle__images {
+  display: flex;
+  position: absolute;
+  width: 51%;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 500px;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+  }
+  .circle__image {
+    position: absolute;
+    transform-origin: center bottom;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 1s, opacity 1s;
+    &.circle__image--1 {
+      width: 70%;
+      bottom: 8%;
+    }
+    &.circle__image--5 {
+      left: 5%;
+      bottom: 15%;
+    }
+    &.circle__image--6 {
+      bottom: 80%;
+    }
+    &.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
