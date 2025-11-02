@@ -1,7 +1,8 @@
-import { initNavigationMenu, hidePreloader, initLinksMiddleware, initScrollArea } from './helpers.js';
+import { initNavigationMenu, hidePreloader, initLinksMiddleware, initScrollArea, fixScreenHeight } from './helpers.js';
 import { initSliders, onStageSlideChange } from './sliders.js';
 import { initTabs } from './tabs.js';
 
+fixScreenHeight();
 initScrollArea();
 initNavigationMenu();
 initLinksMiddleware();

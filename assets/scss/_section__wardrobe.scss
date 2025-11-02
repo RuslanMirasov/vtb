@@ -1,11 +1,4 @@
-.section--wardrobe {
-  height: auto;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+.main[data-tabs] {
   .titles {
     .star {
       position: relative;
@@ -13,7 +6,7 @@
     }
     margin-top: myclamp(16px, 32px, 1440px, 1440px);
     .subtitle {
-      max-width: myclamp(280px, 610px, 1440px, 2560px);
+      max-width: myclamp(270px, 610px, 1440px, 2560px);
     }
   }
 
@@ -109,5 +102,293 @@
 .loaded {
   .wardrobe-slider {
     opacity: 1;
+  }
+}
+
+.breadcrumb-link {
+  font-size: myclamp(14px, 14px, 1440px, 2560px);
+  @media (min-width: 768px) {
+    margin-bottom: -10px;
+  }
+}
+
+.post {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: myclamp(200px, 1180px, 1440px, 2560px);
+  padding-top: myclamp(10px, 20px, 1440px, 2560px);
+  padding-bottom: myclamp(50px, 100px, 1440px, 2560px);
+  flex-direction: column;
+  align-items: center;
+  gap: myclamp(50px, 70px, 1440px, 2560px);
+  margin: 0 auto;
+
+  .titles {
+    margin: 0 auto;
+    max-width: myclamp(610px, 610px, 1440px, 2560px);
+    hr {
+      &.big {
+        margin-bottom: 20px;
+        &.invers {
+          margin-bottom: 0px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.post-header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: myclamp(280px, 862px, 1440px, 2560px);
+  min-height: myclamp(280px, 360px, 1440px, 2560px);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 auto;
+  padding-left: myclamp(280px, 431px, 1440px, 2560px);
+  gap: myclamp(32px, 32px, 1440px, 2560px);
+
+  .title {
+    text-align: left;
+  }
+
+  .post-header__image {
+    position: absolute;
+    transform: rotate(-7.8deg);
+    left: 2%;
+    top: 0px;
+    border-radius: 30px;
+    width: myclamp(280px, 360px, 1440px, 2560px);
+    height: myclamp(280px, 360px, 1440px, 2560px);
+    @media (max-width: 1279px) {
+      left: 0%;
+    }
+  }
+
+  ul {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    gap: myclamp(20px, 32px, 1440px, 2560px);
+    padding-left: myclamp(24px, 24px, 1440px, 2560px);
+
+    li {
+      list-style: disc;
+      font-size: myclamp(18px, 18px, 1440px, 2560px);
+      line-height: 1.2;
+    }
+  }
+  @media (max-width: 1023px) {
+    padding-left: 0px;
+    gap: 20px;
+    .title {
+      text-align: center;
+      font-weight: 400;
+    }
+    .post-header__image {
+      position: relative;
+      transform: rotate(0deg);
+      margin: 0 auto;
+    }
+  }
+}
+
+.post-description {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: myclamp(24px, 24px, 1440px, 2560px);
+
+  .post-description__icon {
+    height: myclamp(72px, 160px, 1440px, 2560px);
+  }
+}
+
+.post-description__content {
+  display: flex;
+  position: relative;
+  width: myclamp(300px, 640px, 1440px, 2560px);
+  padding: myclamp(40px, 40px, 1440px, 2560px) myclamp(20px, 20px, 1440px, 2560px);
+  border-radius: myclamp(30px, 30px, 1440px, 2560px);
+  margin-top: myclamp(10px, 20px, 1440px, 2560px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: myclamp(20px, 20px, 1440px, 2560px);
+  background: url('../img/wardrobe/bg.webp') no-repeat center center/cover;
+  color: var(--blue);
+
+  @media (max-width: 767px) {
+    transform: rotate(2deg);
+    .title {
+      font-size: 28px;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: myclamp(10px, 20px, 1440px, 2560px);
+    top: -24px;
+    width: myclamp(57px, 57px, 1440px, 2560px);
+    height: myclamp(59px, 59px, 1440px, 2560px);
+    background: url('../img/push-pin.webp') no-repeat center center/cover;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: myclamp(460px, 460px, 1440px, 2560px);
+    border-radius: myclamp(20px, 20px, 1440px, 2560px);
+  }
+
+  ul {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    gap: myclamp(20px, 20px, 1440px, 2560px);
+    width: 100%;
+    max-width: myclamp(460px, 460px, 1440px, 2560px);
+
+    li {
+      display: flex;
+      position: relative;
+      width: 100%;
+      gap: myclamp(10px, 20px, 1440px, 2560px);
+      font-size: myclamp(18px, 18px, 1440px, 2560px);
+      font-weight: 500;
+      line-height: 1.2;
+      &:before {
+        content: '';
+        display: block;
+        width: myclamp(15px, 21px, 1440px, 2560px);
+        height: myclamp(17px, 23px, 1440px, 2560px);
+        background: url('../img/li.webp') no-repeat center center/cover;
+        flex-shrink: 0;
+        @media (max-width: 767px) {
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+}
+
+.post-steps {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: myclamp(40px, 60px, 1440px, 2560px);
+  margin: 0 auto;
+  @media (max-width: 1279px) {
+    max-width: myclamp(300px, 640px, 1200px, 2560px);
+  }
+  @media (max-width: 767px) {
+    max-width: 280px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% - myclamp(96px, 180px, 1440px, 2560px)) / 4);
+    gap: myclamp(12px, 12px, 1440px, 2560px);
+
+    @media (max-width: 1279px) {
+      width: calc((100% - myclamp(32px, 60px, 1440px, 2560px)) / 2);
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    h3 {
+      display: inline-flex;
+      align-items: center;
+      align-content: center;
+      width: auto;
+      font-size: 32px;
+      gap: 20px;
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        width: 26px;
+        height: 26px;
+        background: url('../img/header/star.webp') no-repeat center center;
+        background-size: 200%;
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: myclamp(20px, 20px, 1440px, 2560px);
+      margin: 0 auto;
+      @media (max-width: 767px) {
+        max-width: 250px;
+      }
+    }
+
+    p {
+      font-size: myclamp(16px, 16px, 1440px, 2560px);
+      line-height: 1.2;
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.nex-page-link {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: myclamp(240px, 440px, 1440px, 2560px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: myclamp(16px, 20px, 1440px, 2560px);
+  text-align: center;
+
+  h3 {
+    font-size: myclamp(20px, 28px, 1440px, 2560px);
+    font-weight: 500;
+  }
+
+  p {
+    font-size: myclamp(16px, 18px, 1440px, 2560px);
+    line-height: 1.4;
+  }
+
+  img {
+    position: relative;
+    transition: 0.5s;
+    transform: scale(1);
+    max-height: myclamp(80px, 124px, 1440px, 2560px);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
   }
 }

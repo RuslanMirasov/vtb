@@ -199,3 +199,13 @@ export const initScrollArea = () => {
     delete scrollArea.dataset.scrollInitialized;
   };
 };
+
+export const fixScreenHeight = () => {
+  const fixMobileVH = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
+
+  fixMobileVH();
+  window.addEventListener('resize', fixMobileVH);
+};
