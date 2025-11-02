@@ -126,4 +126,11 @@ hr {
   height: 16px;
   background: url('../img/hr.webp') no-repeat center center;
   background-size: auto 100%;
+
+  &.star {
+    width: 24px;
+    height: 24px;
+    background: url('../img/header/star.webp') no-repeat center center;
+    background-size: 180%;
+  }
 }

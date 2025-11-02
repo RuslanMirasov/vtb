@@ -1,8 +1,73 @@
 .section--wardrobe {
+  min-height: 100svh;
+  padding-bottom: myclamp(160px, 170px, 1440px, 2560px);
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: myclamp(160px, 170px, 1440px, 2560px);
+    background: url('../img/floor.webp') no-repeat center center/cover;
+    z-index: 2;
+  }
   .titles {
+    .star {
+      position: relative;
+      transform: translate(0%, 40%);
+    }
     margin-top: myclamp(16px, 32px, 1440px, 1440px);
     .subtitle {
-      max-width: 610px;
+      max-width: myclamp(280px, 610px, 1440px, 2560px);
+    }
+  }
+}
+
+.wardrobe-navigation {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: myclamp(34px, 50px, 1440px, 2560px);
+
+  .scroll-area {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: -20px;
+  }
+
+  ul {
+    display: flex;
+    position: relative;
+    width: max-content;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: myclamp(6px, 6px, 1440px, 2560px);
+    margin: 0 auto;
+
+    li {
+      padding: myclamp(7px, 7px, 1440px, 2560px) myclamp(20px, 20px, 1440px, 2560px);
+      background: var(--blue-medium);
+      color: var(--white);
+      border-radius: 100px;
+      cursor: pointer;
+      transition: 0.3s;
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: myclamp(14px, 14px, 1440px, 2560px);
+      &.active {
+        background: var(--white);
+        color: var(--blue-medium);
+      }
     }
   }
 }

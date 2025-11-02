@@ -40,7 +40,7 @@
   line-height: 1.4;
   text-align: center;
   &.subtitle--16 {
-    font-size: 16px;
+    font-size: myclamp(16px, 16px, 1440px, 2560px);
   }
 }
 

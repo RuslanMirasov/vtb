@@ -3,6 +3,7 @@
   --font: "vtb", sans-serif;
   --bg: #0024b3;
   --blue: #0a2896;
+  --blue-medium: #1e4bd2;
   --color: #ffffff;
   --white: #ffffff;
   --black: #000000;
@@ -159,6 +160,12 @@ hr {
   height: 16px;
   background: url("../img/hr.webp") no-repeat center center;
   background-size: auto 100%;
+}
+hr.star {
+  width: 24px;
+  height: 24px;
+  background: url("../img/header/star.webp") no-repeat center center;
+  background-size: 180%;
 }
 
 .preloader {
@@ -582,7 +589,7 @@ hr {
   text-align: center;
 }
 .subtitle.subtitle--16 {
-  font-size: 16px;
+  font-size: clamp(16px, 1.1111vw, 28px);
 }
 
 .ta--l .subtitle,
@@ -1012,7 +1019,7 @@ hr {
   bottom: 0px;
   width: 100%;
   height: clamp(82px, 5.6944vw, 146px);
-  background: var(--white) url("../img/header/bg.webp") no-repeat center center/cover;
+  background: url("../img/floor.webp") no-repeat center center/cover;
   z-index: 2;
 }
 .section--stage .swiper-arrow[data-arrow-prev] {
@@ -1352,11 +1359,77 @@ hr {
     min-width: 200px;
   }
 }
+.section--wardrobe {
+  min-height: 100svh;
+  padding-bottom: clamp(160px, 11.8056vw, 302px);
+}
+.section--wardrobe:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: clamp(160px, 11.8056vw, 302px);
+  background: url("../img/floor.webp") no-repeat center center/cover;
+  z-index: 2;
+}
 .section--wardrobe .titles {
   margin-top: clamp(16px, 2.2222vw, 32px);
 }
+.section--wardrobe .titles .star {
+  position: relative;
+  transform: translate(0%, 40%);
+}
 .section--wardrobe .titles .subtitle {
-  max-width: 610px;
+  max-width: clamp(280px, 42.3611vw, 1084px);
+}
+
+.wardrobe-navigation {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: clamp(34px, 3.4722vw, 89px);
+}
+.wardrobe-navigation .scroll-area {
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: -20px;
+}
+.wardrobe-navigation ul {
+  display: flex;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: clamp(6px, 0.4167vw, 11px);
+  margin: 0 auto;
+}
+.wardrobe-navigation ul li {
+  padding: clamp(7px, 0.4861vw, 12px) clamp(20px, 1.3889vw, 36px);
+  background: var(--blue-medium);
+  color: var(--white);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: clamp(14px, 0.9722vw, 25px);
+}
+.wardrobe-navigation ul li.active {
+  background: var(--white);
+  color: var(--blue-medium);
 }
 
 .section--makeup .titles {
