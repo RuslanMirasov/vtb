@@ -88,6 +88,7 @@ a {
 .main {
   opacity: 1;
   transition: opacity 0.5s;
+  overflow-x: hidden;
 
   &.hidden {
     opacity: 0;
@@ -110,17 +111,9 @@ a {
   max-width: myclamp(320px, 1200px, 1440px, 2560px);
 }
 
-.loaded {
-  .section {
-    opacity: 1;
-    &.hidden {
-      opacity: 0;
-    }
-  }
-}
-
 hr {
   display: block;
+  position: relative;
   width: 100%;
   border: none;
   height: 16px;
@@ -132,5 +125,50 @@ hr {
     height: 24px;
     background: url('../img/header/star.webp') no-repeat center center;
     background-size: 180%;
+  }
+}
+
+.floor {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: myclamp(20px, 20px, 1440px, 2560px);
+
+  z-index: 1;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.floor {
+  position: relative;
+  &:after {
+    content: '';
+    width: 100%;
+    height: myclamp(160px, 170px, 1440px, 2560px);
+    background: url('../img/floor.webp') no-repeat center center/cover;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: myclamp(160px, 170px, 1440px, 2560px);
+    width: myclamp(496px, 588px, 1440px, 2560px);
+    height: myclamp(363px, 430px, 1440px, 2560px);
+    transform: translate(-50%, 0%);
+    background: url('../img/circle.webp') no-repeat center center/cover;
+  }
+}
+
+.loaded {
+  .section,
+  .floor {
+    opacity: 1;
+    &.hidden {
+      opacity: 0;
+    }
   }
 }

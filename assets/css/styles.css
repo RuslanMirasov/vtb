@@ -125,6 +125,7 @@ a[aria-current=page] {
 .main {
   opacity: 1;
   transition: opacity 0.5s;
+  overflow-x: hidden;
 }
 .main.hidden {
   opacity: 0;
@@ -146,15 +147,9 @@ a[aria-current=page] {
   max-width: clamp(320px, 83.3333vw, 2133px);
 }
 
-.loaded .section {
-  opacity: 1;
-}
-.loaded .section.hidden {
-  opacity: 0;
-}
-
 hr {
   display: block;
+  position: relative;
   width: 100%;
   border: none;
   height: 16px;
@@ -166,6 +161,49 @@ hr.star {
   height: 24px;
   background: url("../img/header/star.webp") no-repeat center center;
   background-size: 180%;
+}
+
+.floor {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: clamp(20px, 1.3889vw, 36px);
+  z-index: 1;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.floor {
+  position: relative;
+}
+.floor:after {
+  content: "";
+  width: 100%;
+  height: clamp(160px, 11.8056vw, 302px);
+  background: url("../img/floor.webp") no-repeat center center/cover;
+  display: block;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.floor:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: clamp(160px, 11.8056vw, 302px);
+  width: clamp(496px, 40.8333vw, 1045px);
+  height: clamp(363px, 29.8611vw, 764px);
+  transform: translate(-50%, 0%);
+  background: url("../img/circle.webp") no-repeat center center/cover;
+}
+
+.loaded .section,
+.loaded .floor {
+  opacity: 1;
+}
+.loaded .section.hidden,
+.loaded .floor.hidden {
+  opacity: 0;
 }
 
 .preloader {
@@ -577,10 +615,10 @@ hr.star {
   font-size: clamp(28px, 2.7778vw, 71px);
 }
 .title.title--h2 {
-  font-size: 38px;
+  font-size: clamp(32px, 2.6389vw, 68px);
 }
 .title.title--h3 {
-  font-size: 28px;
+  font-size: clamp(28px, 1.9444vw, 50px);
 }
 
 .subtitle {
@@ -622,7 +660,7 @@ hr.star {
   position: absolute;
   bottom: -3px;
   background: var(--white);
-  width: 50%;
+  width: 51%;
   height: calc(100% + 3px);
   transition: 0.5s;
 }
@@ -820,6 +858,39 @@ hr.star {
     transform: translate(0%, 0%);
   }
 }
+[data-tabs] [data-tab] {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: opacity 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+[data-tabs] [data-tab].active {
+  position: relative;
+  pointer-events: all;
+  opacity: 0;
+}
+[data-tabs] [data-tab] .swiper-arrow {
+  z-index: 19;
+}
+[data-tabs] [data-tab] .swiper-arrow[data-arrow-prev] {
+  left: clamp(4px, 0.8333vw, 21px);
+}
+[data-tabs] [data-tab] .swiper-arrow[data-arrow-next] {
+  right: clamp(4px, 0.8333vw, 21px);
+}
+
+.loaded [data-tabs] [data-tab].active {
+  opacity: 1;
+}
+
 .section--hero {
   display: flex;
   flex-direction: column;
@@ -834,7 +905,7 @@ hr.star {
   padding-top: 32px;
 }
 .section--hero .titles .subtitle {
-  max-width: clamp(490px, 34.0278vw, 681px);
+  max-width: clamp(490px, 34.0278vw, 871px);
 }
 @media (max-width: 1279px) {
   .section--hero .titles .title {
@@ -1360,18 +1431,13 @@ hr.star {
   }
 }
 .section--wardrobe {
+  height: auto;
   min-height: 100svh;
-  padding-bottom: clamp(160px, 11.8056vw, 302px);
-}
-.section--wardrobe:before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: clamp(160px, 11.8056vw, 302px);
-  background: url("../img/floor.webp") no-repeat center center/cover;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 .section--wardrobe .titles {
   margin-top: clamp(16px, 2.2222vw, 32px);
@@ -1382,6 +1448,12 @@ hr.star {
 }
 .section--wardrobe .titles .subtitle {
   max-width: clamp(280px, 42.3611vw, 1084px);
+}
+.section--wardrobe .section:not([data-tab]) {
+  z-index: 2;
+}
+.section--wardrobe [data-tab] {
+  margin-top: auto;
 }
 
 .wardrobe-navigation {
@@ -1430,6 +1502,39 @@ hr.star {
 .wardrobe-navigation ul li.active {
   background: var(--white);
   color: var(--blue-medium);
+}
+
+.wardrobe-slider {
+  position: relative;
+  text-align: center;
+  margin-top: auto;
+  margin-top: clamp(80px, 5.5556vw, 142px);
+  z-index: 2;
+  transition: 1s;
+  opacity: 0;
+}
+.wardrobe-slider .swiper-slide {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 14px;
+}
+.wardrobe-slider .swiper-slide .thumbnail {
+  max-height: clamp(325px, 27.7778vw, 711px);
+}
+.wardrobe-slider .swiper-slide .title {
+  color: var(--blue);
+}
+.wardrobe-slider .swiper-slide .button {
+  margin-top: clamp(6px, 0.6944vw, 18px);
+}
+
+.loaded .wardrobe-slider {
+  opacity: 1;
 }
 
 .section--makeup .titles {

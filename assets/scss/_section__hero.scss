@@ -10,7 +10,7 @@
   .titles {
     padding-top: 32px;
     .subtitle {
-      max-width: myclamp(490px, 490px, 1440px, 2000px);
+      max-width: myclamp(490px, 490px, 1440px, 2560px);
     }
     @media (max-width: 1279px) {
       .title {

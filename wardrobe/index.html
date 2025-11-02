@@ -79,8 +79,8 @@
     <!--FIXED-BACKGROUND-->
     <div class="fixed-background"></div>
 
-    <main class="main">
-      <section class="section section--wardrobe">
+    <main class="main section--wardrobe" data-tabs>
+      <section class="section">
         <div class="container">
           <div class="titles">
             <hr class="star" />
@@ -97,15 +97,127 @@
         <div class="wardrobe-navigation">
           <div class="scroll-area">
             <ul>
-              <li data-tab="1" class="tab-button active">По щучьему велению</li>
-              <li data-tab="2" class="tab-button">Золотой петушок</li>
-              <li data-tab="3" class="tab-button">Заячья избушка</li>
-              <li data-tab="4" class="tab-button">Морозко</li>
-              <li data-tab="5" class="tab-button">Конёк-Горбунок</li>
+              <li data-tab-link="1" class="tab-button active">По щучьему велению</li>
+              <li data-tab-link="2" class="tab-button">Золотой петушок</li>
+              <li data-tab-link="3" class="tab-button">Заячья избушка</li>
+              <li data-tab-link="4" class="tab-button">Морозко</li>
+              <li data-tab-link="5" class="tab-button">Конёк-Горбунок</li>
             </ul>
           </div>
         </div>
       </section>
+
+      <!--По щучьему велению-->
+      <section data-tab="1" class="active" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper wardrobe-slider">
+          <div class="swiper-wrapper">
+            <!--Марья-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/marya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <!--Емеля-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/emelya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="swiper-arrow" data-arrow-prev></button>
+        <button type="button" class="swiper-arrow" data-arrow-next></button>
+      </section>
+
+      <!--Золотой петушок-->
+      <section data-tab="2" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper wardrobe-slider">
+          <div class="swiper-wrapper">
+            <!--Марья-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/marya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <!--Емеля-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/emelya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="swiper-arrow" data-arrow-prev></button>
+        <button type="button" class="swiper-arrow" data-arrow-next></button>
+      </section>
+
+      <!--Заячья избушка-->
+      <section data-tab="3" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper wardrobe-slider">
+          <div class="swiper-wrapper">
+            <!--Марья-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/marya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <!--Емеля-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/emelya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="swiper-arrow" data-arrow-prev></button>
+        <button type="button" class="swiper-arrow" data-arrow-next></button>
+      </section>
+
+      <!--Морозко-->
+      <section data-tab="4" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper wardrobe-slider">
+          <div class="swiper-wrapper">
+            <!--Марья-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/marya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <!--Емеля-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/emelya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="swiper-arrow" data-arrow-prev></button>
+        <button type="button" class="swiper-arrow" data-arrow-next></button>
+      </section>
+
+      <!--Конёк-Горбунок-->
+      <section data-tab="5" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper wardrobe-slider">
+          <div class="swiper-wrapper">
+            <!--Марья-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/marya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <!--Емеля-->
+            <div class="swiper-slide">
+              <img src="./../assets/img/wardrobe/emelya/thumbnail.webp" loading="lazy" alt="ВТБ" class="thumbnail" />
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="swiper-arrow" data-arrow-prev></button>
+        <button type="button" class="swiper-arrow" data-arrow-next></button>
+      </section>
+
+      <div class="floor"></div>
     </main>
 
     <!--COLUMNS-->

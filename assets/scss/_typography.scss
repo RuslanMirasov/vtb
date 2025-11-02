@@ -27,11 +27,11 @@
   }
 
   &.title--h2 {
-    font-size: 38px;
+    font-size: myclamp(32px, 38px, 1440px, 2560px);
   }
 
   &.title--h3 {
-    font-size: 28px;
+    font-size: myclamp(28px, 28px, 1440px, 2560px);
   }
 }
 
