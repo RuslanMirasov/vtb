@@ -14,7 +14,8 @@ export const hidePreloader = () => {
   const columnRight = document.querySelector('.column--right');
   const fixedBackground = document.querySelector('.fixed-background');
   const preloaderImage = document.querySelector('.preloader__image');
-  const isMainPage = fixedBackground.classList.contains('scaleble');
+  const isMainPage = fixedBackground ? fixedBackground.classList.contains('scaleble') : false;
+
   const delay = isMainPage ? 1200 : 500;
   const delay2 = isMainPage ? 1000 : 0;
 

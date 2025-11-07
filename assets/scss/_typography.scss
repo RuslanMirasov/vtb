@@ -33,6 +33,10 @@
   &.title--h3 {
     font-size: myclamp(20px, 28px, 1440px, 2560px);
   }
+
+  &.title--h4 {
+    font-size: myclamp(24px, 32px, 1440px, 2560px);
+  }
 }
 
 .subtitle {
@@ -49,4 +53,8 @@
   .title {
     text-align: left;
   }
+}
+
+.w-500 {
+  font-weight: 500;
 }

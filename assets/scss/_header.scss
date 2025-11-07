@@ -70,6 +70,9 @@
   display: block;
   width: myclamp(79.06px, 90.36px, 1440px, 1440px);
   height: myclamp(28px, 32px, 1440px, 1440px);
+  &.logo--center {
+    margin: 0 auto;
+  }
 }
 
 .burger {

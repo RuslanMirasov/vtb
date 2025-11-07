@@ -131,6 +131,13 @@ hr {
     background: url('../img/hr-big.webp') no-repeat center center;
     background-size: auto 100%;
   }
+
+  &.blue {
+    height: myclamp(16px, 22px, 1440px, 1440px);
+    background: url('../img/hr-blue.webp') no-repeat center center;
+    background-size: auto 100%;
+  }
+
   &.invers {
     transform: scaleY(-1);
   }
@@ -140,6 +147,10 @@ hr {
     height: 24px;
     background: url('../img/header/star.webp') no-repeat center center;
     background-size: 180%;
+    &.star--blue {
+      background: url('../img/header/star-blue.webp') no-repeat center center;
+      background-size: 180%;
+    }
   }
 }
 

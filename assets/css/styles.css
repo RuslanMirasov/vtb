@@ -166,6 +166,11 @@ hr.big {
   background: url("../img/hr-big.webp") no-repeat center center;
   background-size: auto 100%;
 }
+hr.blue {
+  height: clamp(16px, 1.5278vw, 22px);
+  background: url("../img/hr-blue.webp") no-repeat center center;
+  background-size: auto 100%;
+}
 hr.invers {
   transform: scaleY(-1);
 }
@@ -173,6 +178,10 @@ hr.star {
   width: 24px;
   height: 24px;
   background: url("../img/header/star.webp") no-repeat center center;
+  background-size: 180%;
+}
+hr.star.star--blue {
+  background: url("../img/header/star-blue.webp") no-repeat center center;
   background-size: 180%;
 }
 
@@ -369,6 +378,9 @@ hr.star {
   display: block;
   width: clamp(79.06px, 6.275vw, 90px);
   height: clamp(28px, 2.2222vw, 32px);
+}
+.logo.logo--center {
+  margin: 0 auto;
 }
 
 .burger {
@@ -633,6 +645,9 @@ hr.star {
 .title.title--h3 {
   font-size: clamp(20px, 1.9444vw, 50px);
 }
+.title.title--h4 {
+  font-size: clamp(24px, 2.2222vw, 57px);
+}
 
 .subtitle {
   font-size: clamp(16px, 1.25vw, 32px);
@@ -646,6 +661,10 @@ hr.star {
 .ta--l .subtitle,
 .ta--l .title {
   text-align: left;
+}
+
+.w-500 {
+  font-weight: 500;
 }
 
 .button {
@@ -1562,6 +1581,9 @@ hr.star {
   gap: clamp(50px, 4.8611vw, 124px);
   margin: 0 auto;
 }
+.post.post--dark {
+  color: var(--blue);
+}
 .post .titles {
   margin: 0 auto;
   max-width: clamp(610px, 42.3611vw, 1084px);
@@ -1830,4 +1852,137 @@ hr.star {
 }
 .section--makeup .titles .subtitle {
   max-width: 610px;
+}
+
+.section--soon {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.post.post--soon {
+  color: var(--blue);
+  gap: clamp(20px, 2.7778vw, 71px);
+}
+.post.post--soon .subtitle {
+  max-width: clamp(280px, 36.1111vw, 924px);
+  font-size: clamp(20px, 1.3889vw, 36px);
+  line-height: clamp(24px, 1.8056vw, 46px);
+}
+.post.post--soon .star.star--blue {
+  margin: clamp(10px, 1.3889vw, 36px) auto;
+}
+
+.scrolldown {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 3;
+  -webkit-animation: moveUpDown 2s ease-in-out infinite;
+          animation: moveUpDown 2s ease-in-out infinite;
+}
+.scrolldown img {
+  width: 100%;
+}
+
+@-webkit-keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.shtori {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 0px;
+  width: 100%;
+  min-width: 1200px;
+  height: calc(100svh - 100px);
+  margin-bottom: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .shtori {
+    transform: translate(-60%, 0%);
+  }
+}
+.shtori:before, .shtori:after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+.shtori:before {
+  z-index: 3;
+  left: 0px;
+  bottom: 0px;
+  background: url("../img/soon/shtora_l.webp") no-repeat right bottom/cover;
+}
+.shtori:after {
+  z-index: 1;
+  left: 50%;
+  bottom: 0px;
+  background: url("../img/soon/shtora_r.webp") no-repeat left bottom/cover;
+}
+.shtori .shtori__hand {
+  position: absolute;
+  left: 50%;
+  transform: translate(-15%, 0%) rotate(-5deg);
+  z-index: 2;
+  width: clamp(280px, 24.5833vw, 629px);
+  transform-origin: left center;
+  -webkit-animation: rotateSwing 3.5s ease-in-out infinite;
+          animation: rotateSwing 3.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotateSwing {
+  0% {
+    transform: translate(-15%, 0%) rotate(-5deg);
+  }
+  50% {
+    transform: translate(-15%, 0%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-15%, 0%) rotate(-5deg);
+  }
+}
+
+@keyframes rotateSwing {
+  0% {
+    transform: translate(-15%, 0%) rotate(-5deg);
+  }
+  50% {
+    transform: translate(-15%, 0%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-15%, 0%) rotate(-5deg);
+  }
 }

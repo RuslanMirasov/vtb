@@ -124,6 +124,10 @@
   gap: myclamp(50px, 70px, 1440px, 2560px);
   margin: 0 auto;
 
+  &.post--dark {
+    color: var(--blue);
+  }
+
   .titles {
     margin: 0 auto;
     max-width: myclamp(610px, 610px, 1440px, 2560px);
