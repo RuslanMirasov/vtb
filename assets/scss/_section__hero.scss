@@ -123,10 +123,10 @@
 
 .select-a-play {
   position: fixed;
-  right: myclamp(8px, 52px, 1440px, 1440px);
-  bottom: myclamp(8px, 30px, 1440px, 1440px);
-  width: myclamp(60px, 120px, 1440px, 1440px);
-  height: myclamp(60px, 120px, 1440px, 1440px);
+  right: myclamp(8px, 52px, 1440px, 2560px);
+  bottom: myclamp(8px, 30px, 1440px, 2560px);
+  width: myclamp(60px, 120px, 1440px, 2560px);
+  height: myclamp(60px, 120px, 1440px, 2560px);
   border-radius: 120px;
   background: var(--red);
   z-index: 20;
@@ -140,9 +140,11 @@
     position: absolute;
     left: 0px;
     top: 0px;
+    z-index: 1;
 
     &.select-a-play__text {
-      animation: spin 5s linear infinite;
+      animation: spin 8s linear infinite;
+      z-index: 2;
     }
   }
 

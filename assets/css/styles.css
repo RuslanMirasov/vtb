@@ -1048,10 +1048,10 @@ hr.star.star--blue {
 
 .select-a-play {
   position: fixed;
-  right: clamp(8px, 3.6111vw, 52px);
-  bottom: clamp(8px, 2.0833vw, 30px);
-  width: clamp(60px, 8.3333vw, 120px);
-  height: clamp(60px, 8.3333vw, 120px);
+  right: clamp(8px, 3.6111vw, 92px);
+  bottom: clamp(8px, 2.0833vw, 53px);
+  width: clamp(60px, 8.3333vw, 213px);
+  height: clamp(60px, 8.3333vw, 213px);
   border-radius: 120px;
   background: var(--red);
   z-index: 20;
@@ -1065,10 +1065,12 @@ hr.star.star--blue {
   position: absolute;
   left: 0px;
   top: 0px;
+  z-index: 1;
 }
 .select-a-play img.select-a-play__text {
-  -webkit-animation: spin 5s linear infinite;
-          animation: spin 5s linear infinite;
+  -webkit-animation: spin 8s linear infinite;
+          animation: spin 8s linear infinite;
+  z-index: 2;
 }
 @media (max-width: 414px) {
   .select-a-play {
