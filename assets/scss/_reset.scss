@@ -122,7 +122,7 @@ hr {
   position: relative;
   width: 100%;
   border: none;
-  height: 16px;
+  height: myclamp(16px, 16px, 1440px, 2560px);
   background: url('../img/hr.webp') no-repeat center center;
   background-size: auto 100%;
 
@@ -133,7 +133,7 @@ hr {
   }
 
   &.blue {
-    height: myclamp(16px, 22px, 1440px, 1440px);
+    height: myclamp(16px, 22px, 1440px, 2560px);
     background: url('../img/hr-blue.webp') no-repeat center center;
     background-size: auto 100%;
   }

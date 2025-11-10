@@ -157,7 +157,7 @@ hr {
   position: relative;
   width: 100%;
   border: none;
-  height: 16px;
+  height: clamp(16px, 1.1111vw, 28px);
   background: url("../img/hr.webp") no-repeat center center;
   background-size: auto 100%;
 }
@@ -167,7 +167,7 @@ hr.big {
   background-size: auto 100%;
 }
 hr.blue {
-  height: clamp(16px, 1.5278vw, 22px);
+  height: clamp(16px, 1.5278vw, 39px);
   background: url("../img/hr-blue.webp") no-repeat center center;
   background-size: auto 100%;
 }
@@ -1878,6 +1878,11 @@ hr.star.star--blue {
 }
 .post.post--soon .star.star--blue {
   margin: clamp(10px, 1.3889vw, 36px) auto;
+}
+@media (max-width: 599px) {
+  .post.post--soon .title.title--h1 {
+    font-size: 24px;
+  }
 }
 
 .scrolldown {

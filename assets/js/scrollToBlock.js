@@ -16,7 +16,7 @@ export const initScrollToBlock = () => {
     const targetOffset = targetEl.offsetTop - main.offsetTop;
 
     main.scrollTo({
-      top: targetOffset - 40,
+      top: targetOffset - 20,
       behavior: 'smooth',
     });
   };
