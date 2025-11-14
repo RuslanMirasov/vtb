@@ -37,6 +37,10 @@
   &.title--h4 {
     font-size: myclamp(24px, 32px, 1440px, 2560px);
   }
+
+  &.title--28 {
+    font-size: myclamp(28px, 28px, 1440px, 2560px);
+  }
 }
 
 .subtitle {

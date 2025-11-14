@@ -80,3 +80,122 @@
     transform: translate(300px, -50%) rotate(25deg);
   }
 }
+
+.play-button {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding-right: myclamp(42px, 42px, 1440px, 2560px);
+  padding-left: myclamp(10px, 10px, 1440px, 2560px);
+  padding-top: myclamp(10px, 10px, 1440px, 2560px);
+  padding-bottom: myclamp(10px, 10px, 1440px, 2560px);
+  height: myclamp(32px, 32px, 1440px, 2560px);
+  font-size: myclamp(18px, 18px, 1440px, 2560px);
+  font-weight: 600;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0);
+  border-radius: myclamp(10px, 10px, 1440px, 2560px);
+  text-align: left;
+  font-size: myclamp(18px, 18px, 1440px, 2560px);
+  font-weight: 600;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    width: myclamp(32px, 32px, 1440px, 2560px);
+    height: myclamp(32px, 32px, 1440px, 2560px);
+    border-radius: myclamp(10px, 10px, 1440px, 2560px);
+    overflow: hidden;
+    background: url('../img/play-button.webp') no-repeat center center/cover;
+  }
+
+  &.play {
+    &:before {
+      background: url('../img/stop-button.webp') no-repeat center center/cover;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.select-button {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding-left: myclamp(50px, 50px, 1440px, 2560px);
+  padding-right: myclamp(10px, 10px, 1440px, 2560px);
+  padding-top: myclamp(10px, 10px, 1440px, 2560px);
+  padding-bottom: myclamp(10px, 10px, 1440px, 2560px);
+  height: myclamp(32px, 32px, 1440px, 2560px);
+  font-size: myclamp(18px, 18px, 1440px, 2560px);
+  font-weight: 600;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0);
+  border-radius: myclamp(10px, 10px, 1440px, 2560px);
+  text-align: left;
+  font-size: myclamp(18px, 18px, 1440px, 2560px);
+  font-weight: 600;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    width: myclamp(26px, 26px, 1440px, 2560px);
+    height: myclamp(26px, 26px, 1440px, 2560px);
+    border-radius: myclamp(8px, 8px, 1440px, 2560px);
+    overflow: hidden;
+    background: #fff;
+  }
+
+  &.checked {
+    &:before {
+      background: #fff url('../img/checkbox.webp') no-repeat center center/cover;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.full-screen-button {
+  width: myclamp(52px, 52px, 1440px, 2560px);
+  height: myclamp(52px, 52px, 1440px, 2560px);
+  background: var(--bg) url('../img/open-full-screen.webp') no-repeat center center/cover;
+  border-radius: 20px;
+  position: fixed;
+  right: 2%;
+  bottom: 2.5%;
+  z-index: 100;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 0.5s;
+  pointer-events: all;
+
+  &.active {
+    background: var(--bg) url('../img/close-full-screen.webp') no-repeat center center/cover;
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media (max-width: 1023px) {
+    right: 10px;
+    bottom: 70px;
+  }
+}

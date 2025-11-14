@@ -1,4 +1,4 @@
-const debounce = (fn, delay = 150) => {
+export const debounce = (fn, delay = 150) => {
   let timer;
   return (...args) => {
     clearTimeout(timer);
@@ -65,6 +65,8 @@ export const initNavigationMenu = () => {
   const columnRight = document.querySelector('.column--right');
   const fixedBackground = document.querySelector('.fixed-background');
   const selectPlayBtn = document.querySelector('.select-a-play');
+  const fullScreenButton = document.querySelector('.full-screen-button');
+  const mobilNavMenu = document.querySelector('.mobil-nav-menu');
 
   const toggleMenu = () => {
     burger?.classList.toggle('open');
@@ -73,6 +75,8 @@ export const initNavigationMenu = () => {
     columnLeft?.classList.toggle('hidden');
     columnRight?.classList.toggle('hidden');
     selectPlayBtn?.classList.toggle('hidden');
+    fullScreenButton?.classList.toggle('hidden');
+    mobilNavMenu?.classList.toggle('hidden');
     fixedBackground?.classList.toggle('move');
   };
 
@@ -209,4 +213,17 @@ export const fixScreenHeight = () => {
 
   fixMobileVH();
   window.addEventListener('resize', fixMobileVH);
+};
+
+export const initFullScreenButton = () => {
+  const fullScreenBtn = document.querySelectorAll('[data-full-screen]');
+
+  if (!fullScreenBtn.length) return;
+
+  const fullScreenToggle = () => {
+    document.body.classList.toggle('full-screen');
+    fullScreenBtn.forEach(btn => btn.classList.toggle('active'));
+  };
+
+  fullScreenBtn.forEach(btn => btn.addEventListener('click', fullScreenToggle));
 };

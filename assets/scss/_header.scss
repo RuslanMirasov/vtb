@@ -30,7 +30,7 @@
   position: fixed;
   left: 0px;
   top: 0px;
-  z-index: 20;
+  z-index: 300;
   width: 100%;
   height: myclamp(50px, 60px, 1440px, 1440px);
   flex-wrap: wrap;
@@ -269,6 +269,11 @@
   transition: transform 0.5s ease-in-out 0s, opacity 0.5s;
   z-index: 18;
   pointer-events: none;
+  &.have-sidebar {
+    @media (max-width: 1023px) {
+      height: calc(100dvh - myclamp(90px, 120px, 1440px, 1440px));
+    }
+  }
   img {
     display: block;
     height: 100%;
@@ -309,6 +314,25 @@
 
     &.hidden {
       opacity: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &.full-screen {
+      .column {
+        transition: transform 0.5s, opacity 0.5s;
+        &.column--left {
+          opacity: 0;
+        }
+
+        &.column--right {
+          opacity: 0;
+        }
+
+        &.hidden {
+          opacity: 0;
+        }
+      }
     }
   }
 }

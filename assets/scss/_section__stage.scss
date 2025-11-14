@@ -261,90 +261,96 @@
   .button {
     pointer-events: all;
   }
+}
 
-  .stage-desctiption {
-    display: flex;
-    position: absolute;
-    left: 0px;
-    @media (min-width: 1440px) {
-      top: myclamp(72px, 96px, 1440px, 2000px);
-      height: calc(100% - myclamp(82px, 106px, 1440px, 2000px));
-    }
-    @media (max-width: 1023px) {
-      top: myclamp(72px, 96px, 1024px, 1440px);
-      height: calc(100% - myclamp(82px, 106px, 1024px, 1440px));
-    }
-    width: 100%;
+.stage-desctiption {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  @media (min-width: 1440px) {
+    top: myclamp(72px, 96px, 1440px, 2000px);
+    height: calc(100% - myclamp(82px, 106px, 1440px, 2000px));
+  }
+  @media (max-width: 1023px) {
+    top: myclamp(72px, 96px, 1024px, 1440px);
+    height: calc(100% - myclamp(82px, 106px, 1024px, 1440px));
+  }
+  &.relative {
+    position: relative;
+    height: auto;
+    top: auto;
+    align-items: center;
+    align-content: center;
+  }
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 14px;
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 3;
+  }
 
-    justify-content: space-between;
+  .description {
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
     align-items: flex-start;
-    align-content: flex-start;
-    gap: 14px;
-    transition: 1s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 2;
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      z-index: 3;
+    gap: myclamp(8px, 32px, 1440px, 2560px);
+    order: 1;
+
+    .subtitle {
+      display: block;
+      text-align: left;
+      margin-top: -8px;
+    }
+  }
+
+  .table {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: myclamp(20px, 30px, 1440px, 2560px);
+    padding: myclamp(8px, 12px, 1440px, 2560px) myclamp(14px, 20px, 1440px, 2560px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    order: 2;
+    img {
+      height: myclamp(24px, 36px, 1440px, 2560px);
     }
 
-    .description {
-      display: inline-flex;
-      position: relative;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: myclamp(8px, 32px, 1440px, 2560px);
-      order: 1;
-
-      .subtitle {
-        display: block;
-        text-align: left;
-        margin-top: -8px;
-      }
-    }
-
-    .table {
-      display: inline-flex;
+    li {
+      display: flex;
       position: relative;
       justify-content: center;
       align-items: center;
       align-content: center;
-      gap: myclamp(20px, 30px, 1440px, 2560px);
-      padding: myclamp(8px, 12px, 1440px, 2560px) myclamp(14px, 20px, 1440px, 2560px);
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 100px;
-      order: 2;
-      img {
-        height: myclamp(24px, 36px, 1440px, 2560px);
-      }
-
-      li {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        gap: myclamp(8px, 12px, 1440px, 2560px);
-        white-space: nowrap;
-        font-size: myclamp(14px, 18px, 1440px, 2560px);
-        font-weight: 500;
-        &.time {
-          &:before {
-            content: '';
-            width: myclamp(24px, 36px, 1440px, 2560px);
-            height: myclamp(24px, 36px, 1440px, 2560px);
-            background: url('../img/stage/icon-time.webp') no-repeat center center/cover;
-          }
+      gap: myclamp(8px, 12px, 1440px, 2560px);
+      white-space: nowrap;
+      font-size: myclamp(14px, 18px, 1440px, 2560px);
+      font-weight: 500;
+      &.time {
+        &:before {
+          content: '';
+          width: myclamp(24px, 36px, 1440px, 2560px);
+          height: myclamp(24px, 36px, 1440px, 2560px);
+          background: url('../img/stage/icon-time.webp') no-repeat center center/cover;
         }
-        &.peoples {
-          &:before {
-            content: '';
-            width: myclamp(32px, 48px, 1440px, 2560px);
-            height: myclamp(24px, 36px, 1440px, 2560px);
-            background: url('../img/stage/icon-peoples.webp') no-repeat center center/cover;
-          }
+      }
+      &.peoples {
+        &:before {
+          content: '';
+          width: myclamp(32px, 48px, 1440px, 2560px);
+          height: myclamp(24px, 36px, 1440px, 2560px);
+          background: url('../img/stage/icon-peoples.webp') no-repeat center center/cover;
         }
       }
     }

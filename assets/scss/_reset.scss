@@ -21,6 +21,7 @@ html,
 body {
   height: 100%;
   overflow: hidden;
+  z-index: 0;
 }
 
 body {
@@ -95,9 +96,24 @@ a {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge legacy */
+  z-index: 19;
+  isolation: isolate;
+
+  &.main--single {
+    opacity: 0;
+  }
 
   &.hidden {
     opacity: 0;
+  }
+}
+
+.loaded {
+  .main.main--single {
+    opacity: 1;
+    &.hidden {
+      opacity: 0;
+    }
   }
 }
 
@@ -196,5 +212,45 @@ hr {
     &.hidden {
       opacity: 0;
     }
+  }
+}
+
+.blue {
+  color: var(--bg);
+}
+
+.custom-scrollbar::-webkit-scrollbar-button,
+.custom-scrollbar::-webkit-scrollbar-button:start,
+.custom-scrollbar::-webkit-scrollbar-button:end,
+.custom-scrollbar::-webkit-scrollbar-button:single-button,
+.custom-scrollbar::-webkit-scrollbar-button:double-button,
+.custom-scrollbar::-webkit-scrollbar-button:increment,
+.custom-scrollbar::-webkit-scrollbar-button:decrement {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Ширина */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Трек */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ccecff;
+  border-radius: 20px;
+}
+
+/* Ползунок */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #29c2ff;
+  border-radius: 20px;
+  border: 3px solid #ccecff;
+}
+
+@media (min-width: 1024px) {
+  .show-in-tablet {
+    display: none !important;
   }
 }

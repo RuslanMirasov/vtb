@@ -1,5 +1,6 @@
 :root {
   --font: 'vtb', sans-serif;
+  --italic: 'roboto-medium-italic', sans-serif;
 
   --bg: #0024b3;
   --blue: #0a2896;
@@ -7,6 +8,7 @@
   --color: #ffffff;
   --white: #ffffff;
   --black: #000000;
+  --black-light: #2f3441;
   --red: #e62632;
   --invalid: #ff0000;
 }
@@ -22,6 +24,7 @@
 @import 'tabs';
 @import 'section__hero';
 @import 'section__stage';
+@import 'section__stage-single';
 @import 'section__wardrobe';
 @import 'section__makeup';
 @import 'soon';

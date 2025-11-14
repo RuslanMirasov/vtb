@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#0A2896" />
+    <meta name="description" content="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href=" ./../../assets/img/header/bg.webp" />
+    <link rel="preload" as="image" href=" ./../../assets/img/header/column-left.webp" />
+    <link rel="preload" as="image" href=" ./../../assets/img/header/column-right.webp" />
+    <link rel="preload" as="image" href=" ./../../assets/img/logo.svg" />
+    <link rel="icon" type="image/x-icon" href=" ./../../assets/img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href=" ./../../assets/css/styles.min.css" />
+    <title>По щучьему велению</title>
+  </head>
+  <body class="body">
+    <!--HEADER-->
+    <header class="header">
+      <a href=" ./../../" class="logo">
+        <img src=" ./../../assets/img/logo.svg" alt="ВТБ" />
+      </a>
+
+      <button class="burger">
+        <span>Меню бургер</span>
+      </button>
+    </header>
+
+    <!--NAVIGATION-->
+    <nav class="navigation">
+      <ul class="menu">
+        <li>
+          <a href=" ./../../stage" class="menu__link">
+            <img src=" ./../../assets/img/header/nav1.webp" alt="ВТБ" />
+            <b>Сцена</b>
+            <p>Пьесы для домашнего&nbsp;театра</p>
+          </a>
+        </li>
+        <li>
+          <a href=" ./../../wardrobe" class="menu__link">
+            <img src=" ./../../assets/img/header/nav2.webp" alt="ВТБ" />
+            <b>Костюмерная</b>
+            <p>Подборка нарядов для&nbsp;главных героев</p>
+          </a>
+        </li>
+        <li>
+          <a href=" ./../../makeup-room" class="menu__link">
+            <img src=" ./../../assets/img/header/nav3.webp" alt="ВТБ" />
+            <b>Гримёрная</b>
+            <p>Идеи макияжа для сказочного&nbsp;преображения</p>
+          </a>
+        </li>
+        <li>
+          <a href=" ./../../orchestra-pit" class="menu__link">
+            <img src=" ./../../assets/img/header/nav4.webp" alt="ВТБ" />
+            <b>Оркестровая яма</b>
+            <p>Музыкальное сопровождение вашей постановки</p>
+          </a>
+        </li>
+        <li>
+          <a href=" ./../../buffet" class="menu__link">
+            <img src=" ./../../assets/img/header/nav5.webp" alt="ВТБ" />
+            <b>Буфет</b>
+            <p>Украшения и рецепты для праздничного стола</p>
+          </a>
+        </li>
+        <li>
+          <a href=" ./../../directors-room" class="menu__link">
+            <img src=" ./../../assets/img/header/nav6.webp" alt="ВТБ" />
+            <b>Кабинет режиссёра</b>
+            <p>Советы для домашнего спектакля и&nbsp;чек-лист для подготовки к празднику</p>
+          </a>
+        </li>
+      </ul>
+      <a href=" ./../../holiday-map" class="menu__link map-link">Карта ёлок</a>
+    </nav>
+
+    <!--FIXED-BACKGROUND-->
+    <div class="fixed-background"></div>
+
+    <main class="main main--single">
+      <section class="stage-single">
+        <div class="stage-desctiption relative active" data-hide-in-fullscreen>
+          <div class="description">
+            <h1 class="title title--h1">По щучьему велению</h1>
+            <p class="subtitle ta--c show-in-tablet">Поют и&nbsp;танцуют все! Даже&nbsp;щука</p>
+          </div>
+          <ul class="table">
+            <li class="time">1 ч. 15 м.</li>
+            <li class="peoples">14</li>
+            <li class="age"><img src="./../../assets/img/stage/icon-18.webp" alt="ВТБ" loading="lazy" /></li>
+          </ul>
+        </div>
+
+        <!--SIDEBAR-->
+
+        <aside class="sidebar" data-hide-in-fullscreen data-stiky-sidebar data-sidebar-popup-close>
+          <p class="subtitle">Поют и&nbsp;танцуют все! Даже&nbsp;щука</p>
+          <div class="sidebar__content">
+            <!--description (popup in mobil) (sidebar in desctop)-->
+            <div class="sidebar__item" data-sidebar-mobil-popup="1">
+              <!--ДУБЛИКАТ ОПИСАНИЯ ДЛЯ МОБИЛЬНОЙ ВЕРСИИ-->
+              <button type="button" data-sidebar-popup-close class="sidebar-popup-close-button"></button>
+              <div class="stage-desctiption relative active" data-hide-in-fullscreen>
+                <ul class="table">
+                  <li class="time">1 ч. 15 м.</li>
+                  <li class="peoples">14</li>
+                  <li class="age"><img src="./../../assets/img/stage/icon-18.webp" alt="ВТБ" loading="lazy" /></li>
+                </ul>
+                <div class="description">
+                  <h2 class="title title--h1">По щучьему велению</h2>
+                  <p class="subtitle">Поют и&nbsp;танцуют все! Даже&nbsp;щука</p>
+                  <p class="subtitle">Пьеса для театра в 2-х действиях</p>
+                </div>
+                <hr />
+              </div>
+              <!--============================================-->
+
+              <h3 class="title title--28">Действующие лица</h3>
+              <div class="sidebar__scroll-area custom-scrollbar">
+                <ul class="sidebar__list">
+                  <li>ЕМЕЛЯ</li>
+                  <li>МАТЬ ЕМЕЛИ</li>
+                  <li>ЦАРЬ</li>
+                  <li>ЦАРЕВНА</li>
+                  <li>МАМКА</li>
+                  <li>ПРИДВОРНЫЙ</li>
+                  <li>МУЖИК</li>
+                  <li>ВОЕВОДА</li>
+                  <li>ГЛАШАТАЙ</li>
+                  <li>ЩУКА</li>
+                  <li>МЕДВЕДЬ</li>
+                  <li>ЛИСА</li>
+                  <li>ЗАЯЦ</li>
+                  <li>ВОЙСКО</li>
+                  <li>БОЯРЕ</li>
+                </ul>
+              </div>
+
+              <!--FIXED PANEL-->
+              <section class="stage-single stage-single--fixed">
+                <div class="fix-buttons-panel" data-styky-limit>
+                  <a href="./../../directors-room" class="fix-button">В кабинет режиссера</a>
+                  <button class="fix-button" data-print="#print-block">Печать</button>
+                  <a href="#" class="fix-button" download>Скачать в PDF</a>
+                  <button class="fix-button" data-full-screen>На полный экран</button>
+                </div>
+              </section>
+            </div>
+
+            <div class="sidebar__item" data-sidebar-mobil-popup="2">
+              <button type="button" data-sidebar-popup-close class="sidebar-popup-close-button"></button>
+              <h3 class="title title--28">Управление звуками</h3>
+              <hr />
+
+              <div class="sidebar__scroll-area for-buttons custom-scrollbar">
+                <ul class="sidebar__buttons">
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/birds.mp3">Пение птиц</button></li>
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/bear.mp3">Рычание медведя</button></li>
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/birds.mp3">Пение птиц</button></li>
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/birds.mp3">Пение птиц</button></li>
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/birds.mp3">Пение птиц</button></li>
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/birds.mp3">Пение птиц</button></li>
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/birds.mp3">Пение птиц</button></li>
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/birds.mp3">Пение птиц</button></li>
+                  <li><button type="button" class="play-button" data-sound-src="./../../assets/sounds/birds.mp3">Пение птиц</button></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="sidebar__item" data-sidebar-mobil-popup="3">
+              <button type="button" data-sidebar-popup-close class="sidebar-popup-close-button"></button>
+              <h3 class="title title--28">Выделение ролей</h3>
+              <hr />
+              <div class="sidebar__scroll-area for-buttons custom-scrollbar">
+                <ul class="sidebar__buttons">
+                  <li><button type="button" class="select-button" data-random-color data-name="ЕМЕЛЯ">Емеля</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="МАТЬ ЕМЕЛИ">Мать Емели</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ЦАРЬ">Царь</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ЦАРЕВНА">Царевна</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="МАМКА">Мамка</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ПРИДВОРНЫЙ">Придворный</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="МУЖИК">Мужик</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ВОЕВОДА">Воевода</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ГЛАШАТАЙ">Глашатай</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ЩУКА">Щука</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="МЕДВЕДЬ">Медведь</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ЛИСА">Лиса</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ЗАЯЦ">Заяц</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="ВОЙСКО">Войско</button></li>
+                  <li><button type="button" class="select-button" data-random-color data-name="БОЯРЕ">Бояре</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!--CONTENT ARTICLE-->
+        <article class="stage-single__content" id="print-block">
+          <h3 class="title title--28 blue">Действие первое</h3>
+
+          <i class="full">Перед занавесом появляется Глашатай, трубит в трубу, прокашливается, пробует голос.</i>
+
+          <p data-name="ГЛАШАТАЙ">
+            <b>ГЛАШАТАЙ:</b> Всем жителям царства-государства - молодым, старикам, умным, дуракам, - всем мужикам слушать царский указ! (Трубит,
+            кашляет.) Всем сей же час во дворец поспешить царёву дочку смешить. Кто таку задачу решит, распотешит да рассмешит дочку царёву,
+            скандалистку и рёву, тому царь её в жёны отдаст и полцарства в приданое даст да мешок гороху в придачу.
+          </p>
+
+          <i>Пауза.</i>
+
+          <p data-name="ЕМЕЛЯ"><b>ЕМЕЛЯ:</b> А ты, Заяц, я знаю, морковку хочешь. Получай! (Появляется морковка.)</p>
+          <p data-name="ЗАЯЦ"><b>ЗАЯЦ:</b> Морковка! (Вертит её перед носом у Медведя.) А у меня морковка!</p>
+          <p data-name="МЕДВЕДЬ"><b>МЕДВЕДЬ:</b> А у меня, Заяц, от твоей морковки голова болит. Спокойной ночи. (Скрывается в берлоге.)</p>
+          <p data-name="ЕМЕЛЯ"><b>ЕМЕЛЯ:</b> Не сердись, Миша. Спокойной ночи.</p>
+
+          <i>
+            <span>Слышен храп Медведя, <button type="button" data-sound-src="./../../assets/sounds/bear.mp3"></button></span>
+            <span>потом - звук трубы . <button type="button" data-sound-src="./../../assets/sounds/birds.mp3"></button></span>
+            <span>Появляется Глашатай, уставший,</span>
+            <span>простывший - совсем уже плох.</span>
+          </i>
+
+          <p data-name="ГЛАШАТАЙ">
+            <b>ГЛАШАТАЙ:</b> Всем жителям царства-государства… (Кашляет, замечает Емелю.) О, мужик! Слушай царский указ: кто Царевну рассмешит…
+            (Кашляет.)… тому Царь её… (Кашляет.)
+          </p>
+          <p data-name="ЗАЯЦ"><b>ЗАЯЦ:</b> И мешок гороху в придачу! (Все смеются.)</p>
+          <p data-name="ГЛАШАТАЙ"><b>ГЛАШАТАЙ:</b> Над кем смеётесь?! Не видите, кто я?</p>
+          <p data-name="ЕМЕЛЯ"><b>ЕМЕЛЯ:</b> Ты - шут гороховый! (Смеётся.)</p>
+          <p data-name="ГЛАШАТАЙ"><b>ГЛАШАТАЙ</b> Что ты сказал? Я - царский Глашатай, а ты - мужик сиволапый! Я ж тебя могу… (Кашляет.)</p>
+          <p data-name="ЕМЕЛЯ"><b>ЕМЕЛЯ:</b> Что ты можешь? Вот я - могу, так могу! ЛИСА: Емеля - он всё может.</p>
+          <p data-name="ЗАЯЦ"><b>ЗАЯЦ:</b> Он мне морковку дал!</p>
+          <p data-name="ГЛАШАТАЙ"><b>ГЛАШАТАЙ</b> (смеётся): Морковку! Всё может! (На сцену влетают сани с дровами.) Что за чудеса? Сани - сами?..</p>
+          <p data-name="ЕМЕЛЯ"><b>ЕМЕЛЯ:</b> Видал?</p>
+          <p data-name="ГЛАШАТАЙ"><b>ГЛАШАТАЙ:</b> (с недоверием): Емеля… всё может?.. А вот… чтобы ёлка розами расцвела, можешь?</p>
+          <p data-name="ЕМЕЛЯ">
+            <b>ЕМЕЛЯ:</b> Можно и розами. (Шепчет заклинание. Ёлка расцветает розами.) А ты говорил! Да мне вашу Царевну рассмешить - тьфу, плёвое
+            дело.
+          </p>
+          <p data-name="ГЛАШАТАЙ"><b>ГЛАШАТАЙ:</b> Так пойдём, Емеля, во дворец!</p>
+          <p data-name="ЕМЕЛЯ"><b>ЕМЕЛЯ:</b> Не-а. Я, слышь, лентяй: сидеть люблю, ходить - неохота. (Все смеются.)</p>
+          <p data-name="ГЛАШАТАЙ"><b>ГЛАШАТАЙ:</b> Емеля, я тебя по-хорошему прошу.</p>
+          <p data-name="ЕМЕЛЯ"><b>ЕМЕЛЯ:</b> Так и я с тобой не по-плохому. А разозлишь меня, - тогда пеняй на себя.</p>
+          <p data-name="ГЛАШАТАЙ">
+            <b>ГЛАШАТАЙ:</b> Ты как, мужик сиволапый, с царским Глашатаем разговариваешь? Али место своё забыл? (Разошёлся, кашляет, трубит, все
+            смеются.)
+          </p>
+        </article>
+
+        <button type="button" class="full-screen-button" data-full-screen></button>
+
+        <!--COLUMNS-->
+        <div class="column column--left have-sidebar">
+          <img src=" ./../../assets/img/header/column-left.webp" alt="ВТБ" />
+        </div>
+        <div class="column column--right have-sidebar">
+          <img src=" ./../../assets/img/header/column-right.webp" alt="ВТБ" />
+        </div>
+      </section>
+    </main>
+
+    <!--MOBIL SIDEBAR/POPUPS MENU-->
+    <menu class="mobil-nav-menu">
+      <li data-open-sidebar-popup="1">
+        <img src="./../../assets/img/info-icon.webp" alt="ВТБ" />
+        <p>Сведения</p>
+      </li>
+      <li data-open-sidebar-popup="2">
+        <img src="./../../assets/img/music-icon.webp" alt="ВТБ" />
+        <p>Звуки</p>
+      </li>
+      <li data-open-sidebar-popup="3">
+        <img src="./../../assets/img/role-icon.webp" alt="ВТБ" />
+        <p>Роли</p>
+      </li>
+    </menu>
+
+    <script src=" ./../../assets/js/scripts.js" type="module"></script>
+  </body>
+</html>
