@@ -41,6 +41,9 @@
   &.title--28 {
     font-size: myclamp(28px, 28px, 1440px, 2560px);
   }
+  &.title--26 {
+    font-size: myclamp(26px, 26px, 1440px, 2560px);
+  }
 }
 
 .subtitle {
@@ -49,6 +52,9 @@
   text-align: center;
   &.subtitle--16 {
     font-size: myclamp(16px, 16px, 1440px, 2560px);
+  }
+  &.subtitle--14 {
+    font-size: myclamp(14px, 14px, 1440px, 2560px);
   }
 }
 

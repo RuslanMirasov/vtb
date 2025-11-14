@@ -14,6 +14,15 @@
   box-sizing: content-box;
   transition: 0.3s;
 
+  &.button--white {
+    border: 2px solid var(--white);
+    background: rgba(0, 0, 0, 0);
+    height: myclamp(36px, 36px, 1440px, 2560px);
+    span {
+      padding: 0px myclamp(20px, 30px, 1440px, 2560px);
+    }
+  }
+
   &:before,
   &:after {
     content: '';

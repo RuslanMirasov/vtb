@@ -6,8 +6,11 @@ let main = null;
 let sidebarBottom = 0;
 
 const getSidebarBottom = () => {
-  const sb = sidebar.getBoundingClientRect();
+  const sb = sidebar?.getBoundingClientRect();
   const mc = main.getBoundingClientRect();
+
+  if (!sb) return;
+
   return sb.bottom - mc.top + main.scrollTop;
 };
 

@@ -6,6 +6,12 @@ import { initSounds } from './playSound.js';
 import { initRundomColorSelect } from './rundomColor.js';
 import { initPrint } from './print.js';
 import { setupStikySidebarEvents, initStikySidebar, initSidebarPopups } from './stiky-sidebar.js';
+import { popup } from './popup.js';
+import { saveAnswerToSession, getTestResult, renderResults } from './test.js';
+
+window.saveAnswerToSession = saveAnswerToSession;
+window.getTestResult = getTestResult;
+window.renderResults = renderResults;
 
 fixScreenHeight();
 initScrollArea();
@@ -20,7 +26,9 @@ initRundomColorSelect();
 initPrint();
 setupStikySidebarEvents();
 initStikySidebar();
+popup.init();
 initSidebarPopups();
+
 hidePreloader();
 
 document.addEventListener('DOMContentLoaded', () => {
