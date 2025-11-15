@@ -254,3 +254,19 @@ hr {
     display: none !important;
   }
 }
+
+.flex {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  gap: myclamp(20px, 24px, 1440px, 2560px);
+}
+
+.ta--c {
+  text-align: center;
+}
+
+.stage-single__content--verse {
+  margin: 0 auto;
+}

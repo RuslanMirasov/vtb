@@ -15,6 +15,10 @@
   @media (max-width: 599px) {
     gap: 12px;
   }
+
+  &.titles--adwice {
+    max-width: myclamp(320px, 320px, 1440px, 2560px) !important;
+  }
 }
 
 .title {
@@ -52,6 +56,9 @@
   text-align: center;
   &.subtitle--16 {
     font-size: myclamp(16px, 16px, 1440px, 2560px);
+  }
+  &.subtitle--24 {
+    font-size: myclamp(18px, 24px, 1440px, 2560px);
   }
   &.subtitle--14 {
     font-size: myclamp(14px, 14px, 1440px, 2560px);

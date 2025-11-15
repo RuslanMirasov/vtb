@@ -1,6 +1,6 @@
 const results = [
   {
-    title: '«Другое»',
+    title: '«Другая»',
     image: null,
     url: './secret-room',
     combination: null,
@@ -96,7 +96,9 @@ export const renderResults = data => {
 
   if (url) {
     resultMarkup.push(
-      `<a href="${path}${url}" class="button" data-test-result-url><span>${title === '«Другое»' ? 'Потайная комната' : 'Перейти к пьесе'}</span></a>`
+      `<a href="${path}${title === '«Другая»' ? '' : url}" class="button" data-test-result-url><span>${
+        title === '«Другая»' ? 'Далее' : 'Перейти к пьесе'
+      }</span></a>`
     );
   }
 
