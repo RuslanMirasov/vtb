@@ -19,8 +19,8 @@ export const initTabs = () => {
     activeButton.classList.remove('active');
     targetButton.classList.add('active');
 
-    activeTab.style.zIndex = '19';
-    targetTab.style.zIndex = '19';
+    //activeTab.style.zIndex = '19';
+    //targetTab.style.zIndex = '19';
     activeTab.style.opacity = '0';
 
     setTimeout(() => {
@@ -33,8 +33,8 @@ export const initTabs = () => {
     }, 550);
 
     setTimeout(() => {
-      activeTab.style.zIndex = '';
-      targetTab.style.zIndex = '';
+      //activeTab.style.zIndex = '';
+      //targetTab.style.zIndex = '';
     }, 1050);
   };
 

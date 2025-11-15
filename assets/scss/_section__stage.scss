@@ -21,11 +21,11 @@
 
   .swiper-arrow {
     &[data-arrow-prev] {
-      left: myclamp(4px, 12px, 1440px, 2560px);
+      left: myclamp(24px, 40px, 1440px, 2560px);
     }
 
     &[data-arrow-next] {
-      right: myclamp(4px, 12px, 1440px, 2560px);
+      right: myclamp(24px, 40px, 1440px, 2560px);
     }
   }
 }
@@ -41,8 +41,16 @@
     align-items: flex-end;
     align-content: flex-end;
     padding-bottom: 50px;
+    transition: opacity 0.5s;
+    opacity: 0;
+    pointer-events: none;
     @media (max-width: 767px) {
       padding-bottom: 65px;
+    }
+
+    &.swiper-slide-active {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }
@@ -266,6 +274,7 @@
 .stage-desctiption {
   display: flex;
   position: absolute;
+  pointer-events: none;
   left: 0px;
   @media (min-width: 1440px) {
     top: myclamp(72px, 96px, 1440px, 2000px);
@@ -295,6 +304,9 @@
     opacity: 1;
     visibility: visible;
     z-index: 3;
+    .button {
+      pointer-events: all;
+    }
   }
 
   .description {

@@ -22,11 +22,11 @@
     .swiper-arrow {
       z-index: 19;
       &[data-arrow-prev] {
-        left: myclamp(4px, 12px, 1440px, 2560px);
+        left: myclamp(24px, 40px, 1440px, 2560px);
       }
 
       &[data-arrow-next] {
-        right: myclamp(4px, 12px, 1440px, 2560px);
+        right: myclamp(24px, 40px, 1440px, 2560px);
       }
     }
   }

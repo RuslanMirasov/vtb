@@ -69,6 +69,10 @@
   align-content: center;
   width: 100%;
 
+  &.full-height {
+    height: 100%;
+  }
+
   @media (max-width: 767px) {
     transform: translate(-60%, 0%);
   }

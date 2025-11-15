@@ -38,7 +38,7 @@ const results = [
   {
     title: '«Путешествие Конька-Горбунка»',
     image: 'assets/img/stage/5_head.webp',
-    url: 'stage/konyok-gorbunok',
+    url: 'stage/konek-gorbunok',
     combination: [
       {
         question1: [],

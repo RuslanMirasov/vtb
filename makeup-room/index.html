@@ -78,26 +78,181 @@
 
     <div class="fixed-background"></div>
 
-    <main class="main">
+    <main class="main" data-tabs>
       <section class="section section--makeup">
-        <div class="titles">
-          <h1 class="title title--h1">Гримёрная</h1>
-          <hr />
-          <p class="subtitle subtitle--16">
-            Большие зеркала в огоньках. На&nbsp;столе&nbsp;- краски и&nbsp;кисти. Немного волшебных блесток, изящных линий и&nbsp;ярких красок, чтобы
-            завершить сказочный образ.
-          </p>
+        <div class="container">
+          <div class="titles">
+            <hr class="star" />
+            <h1 class="title title--h1">Гримёрная</h1>
+            <hr />
+            <p class="subtitle subtitle--16">
+              Большие зеркала в огоньках. На&nbsp;столе&nbsp;- краски и&nbsp;кисти. Немного волшебных блесток, изящных линий и&nbsp;ярких красок,
+              чтобы завершить сказочный образ.
+            </p>
+          </div>
+        </div>
+
+        <div class="wardrobe-navigation">
+          <div class="scroll-area">
+            <ul>
+              <li data-tab-link="1" class="tab-button active">По щучьему велению</li>
+              <li data-tab-link="2" class="tab-button">Заячья избушка</li>
+              <li data-tab-link="3" class="tab-button">Конёк-Горбунок</li>
+              <li data-tab-link="4" class="tab-button">Морозко</li>
+              <li data-tab-link="5" class="tab-button">Золотой петушок</li>
+            </ul>
+          </div>
         </div>
       </section>
-    </main>
 
-    <!--COLUMNS-->
-    <div class="column column--left">
-      <img src="./../assets/img/header/column-left.webp" alt="ВТБ" />
-    </div>
-    <div class="column column--right">
-      <img src="./../assets/img/header/column-right.webp" alt="ВТБ" />
-    </div>
+      <!--ПО ЩУЧЬЕМУ ВЕЛЕНИЮ-->
+      <section data-tab="1" class="active" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper makeup-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-1.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../makeup-room/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-2.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../makeup-room/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+          <button type="button" class="swiper-arrow" data-arrow-prev></button>
+          <button type="button" class="swiper-arrow" data-arrow-next></button>
+        </div>
+      </section>
+
+      <!--ЗАЯЧЬЯ ИЗБУШКА-->
+      <section data-tab="2" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper makeup-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-1.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-2.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+          <button type="button" class="swiper-arrow" data-arrow-prev></button>
+          <button type="button" class="swiper-arrow" data-arrow-next></button>
+        </div>
+      </section>
+
+      <!--КОНЁК-ГОРБУНОК-->
+      <section data-tab="3" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper makeup-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-1.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-2.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+          <button type="button" class="swiper-arrow" data-arrow-prev></button>
+          <button type="button" class="swiper-arrow" data-arrow-next></button>
+        </div>
+      </section>
+
+      <!--МОРОЗКО-->
+      <section data-tab="4" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper makeup-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-1.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-2.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+          <button type="button" class="swiper-arrow" data-arrow-prev></button>
+          <button type="button" class="swiper-arrow" data-arrow-next></button>
+        </div>
+      </section>
+
+      <!--ЗОЛОТОЙ ПЕТУШОК-->
+      <section data-tab="5" data-slider data-speed="1000" data-loop="true">
+        <div class="swiper makeup-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-1.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Марья</h2>
+              <a href="./../wardrobe/marya" class="button"><span>Подробнее</span></a>
+            </div>
+            <div class="swiper-slide">
+              <div class="makeup-slider-image">
+                <div class="makeup-slider-image__wrapper">
+                  <img src="./../assets/img/makup/slide1-2.webp" alt="ВТБ" />
+                </div>
+              </div>
+              <h2 class="title title--h2">Емеля</h2>
+              <a href="./../wardrobe/emelya" class="button"><span>Подробнее</span></a>
+            </div>
+          </div>
+          <button type="button" class="swiper-arrow" data-arrow-prev></button>
+          <button type="button" class="swiper-arrow" data-arrow-next></button>
+        </div>
+      </section>
+
+      <!--COLUMNS-->
+      <div class="column column--left">
+        <img src="./../assets/img/header/column-left.webp" alt="ВТБ" />
+      </div>
+      <div class="column column--right">
+        <img src="./../assets/img/header/column-right.webp" alt="ВТБ" />
+      </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./../assets/js/scripts.js" type="module"></script>

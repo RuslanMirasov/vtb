@@ -1,3 +1,9 @@
+.section--wedrope {
+  .swiper-arrow {
+    z-index: 19;
+  }
+}
+
 .main[data-tabs] {
   .titles {
     .star {
@@ -86,6 +92,12 @@
     align-items: center;
     align-content: center;
     gap: 14px;
+    transition: opacity 1s;
+    opacity: 0;
+
+    &.swiper-slide-active {
+      opacity: 1;
+    }
 
     .thumbnail {
       max-height: myclamp(325px, 400px, 1440px, 2560px);

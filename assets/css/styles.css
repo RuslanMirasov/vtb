@@ -211,7 +211,7 @@ hr.star.star--blue {
   position: relative;
   width: 100%;
   height: clamp(20px, 1.3889vw, 36px);
-  z-index: 1;
+  z-index: 0;
   transition: opacity 0.5s;
   opacity: 0;
 }
@@ -1141,10 +1141,10 @@ hr.star.star--blue {
   z-index: 19;
 }
 [data-tabs] [data-tab] .swiper-arrow[data-arrow-prev] {
-  left: clamp(4px, 0.8333vw, 21px);
+  left: clamp(24px, 2.7778vw, 71px);
 }
 [data-tabs] [data-tab] .swiper-arrow[data-arrow-next] {
-  right: clamp(4px, 0.8333vw, 21px);
+  right: clamp(24px, 2.7778vw, 71px);
 }
 
 .loaded [data-tabs] [data-tab].active {
@@ -1356,10 +1356,10 @@ hr.star.star--blue {
   z-index: 2;
 }
 .section--stage .swiper-arrow[data-arrow-prev] {
-  left: clamp(4px, 0.8333vw, 21px);
+  left: clamp(24px, 2.7778vw, 71px);
 }
 .section--stage .swiper-arrow[data-arrow-next] {
-  right: clamp(4px, 0.8333vw, 21px);
+  right: clamp(24px, 2.7778vw, 71px);
 }
 
 .swiper--stage {
@@ -1373,11 +1373,18 @@ hr.star.star--blue {
   align-items: flex-end;
   align-content: flex-end;
   padding-bottom: 50px;
+  transition: opacity 0.5s;
+  opacity: 0;
+  pointer-events: none;
 }
 @media (max-width: 767px) {
   .swiper--stage .swiper-slide {
     padding-bottom: 65px;
   }
+}
+.swiper--stage .swiper-slide.swiper-slide-active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .circle {
@@ -1590,6 +1597,7 @@ hr.star.star--blue {
 .stage-desctiption {
   display: flex;
   position: absolute;
+  pointer-events: none;
   left: 0px;
   width: 100%;
   justify-content: space-between;
@@ -1624,6 +1632,9 @@ hr.star.star--blue {
   opacity: 1;
   visibility: visible;
   z-index: 3;
+}
+.stage-desctiption.active .button {
+  pointer-events: all;
 }
 .stage-desctiption .description {
   display: inline-flex;
@@ -2116,6 +2127,10 @@ hr.star.star--blue {
     padding: 0px 20px 30px 20px;
   }
 }
+.section--wedrope .swiper-arrow {
+  z-index: 19;
+}
+
 .main[data-tabs] .titles {
   margin-top: clamp(16px, 2.2222vw, 32px);
 }
@@ -2199,6 +2214,11 @@ hr.star.star--blue {
   align-items: center;
   align-content: center;
   gap: 14px;
+  transition: opacity 1s;
+  opacity: 0;
+}
+.wardrobe-slider .swiper-slide.swiper-slide-active {
+  opacity: 1;
 }
 .wardrobe-slider .swiper-slide .thumbnail {
   max-height: clamp(325px, 27.7778vw, 711px);
@@ -2532,11 +2552,107 @@ hr.star.star--blue {
   }
 }
 
+.section--makeup {
+  position: relative;
+  z-index: 10;
+}
 .section--makeup .titles {
-  margin-top: clamp(16px, 2.2222vw, 32px);
+  margin-top: clamp(16px, 2.2222vw, 57px);
 }
 .section--makeup .titles .subtitle {
-  max-width: 610px;
+  max-width: clamp(280px, 30.4167vw, 779px);
+}
+
+section[data-tab] {
+  position: relative;
+  z-index: 1;
+}
+
+.makeup-slider {
+  position: relative;
+  max-width: clamp(600px, 48.6111vw, 1244px);
+  margin-top: -40px;
+  margin-bottom: clamp(30px, 3.4722vw, 89px);
+  overflow: visible;
+}
+@media (min-width: 768px) {
+  .makeup-slider {
+    margin-top: -60px;
+  }
+}
+@media (min-width: 1600px) {
+  .makeup-slider {
+    margin-top: -90px;
+  }
+}
+.makeup-slider:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: url("../img/makup//mirror.webp") no-repeat center top;
+  background-size: 100% auto;
+  width: 100%;
+  max-width: clamp(375px, 35.8333vw, 917px);
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.makeup-slider .swiper-arrow {
+  z-index: 19;
+  top: 40%;
+}
+.makeup-slider .swiper-slide {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: clamp(20px, 1.6667vw, 43px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.makeup-slider .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.makeup-slider .swiper-slide.swiper-slide-active .makeup-slider-image__wrapper {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.5s;
+}
+
+.makeup-slider-image {
+  position: relative;
+  width: 100%;
+  max-width: clamp(375px, 35.8333vw, 917px);
+  height: clamp(338px, 32.2917vw, 827px);
+}
+.makeup-slider-image:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 90.1162%;
+}
+
+.makeup-slider-image__wrapper {
+  position: absolute;
+  width: 30.0387%;
+  height: 50.9677%;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s;
+  top: 15.0537%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.makeup-slider-image__wrapper img {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
 }
 
 .section--soon {
@@ -2618,6 +2734,9 @@ hr.star.star--blue {
   align-items: center;
   align-content: center;
   width: 100%;
+}
+.shtori.full-height {
+  height: 100%;
 }
 @media (max-width: 767px) {
   .shtori {

@@ -176,7 +176,7 @@ hr {
   width: 100%;
   height: myclamp(20px, 20px, 1440px, 2560px);
 
-  z-index: 1;
+  z-index: 0;
   transition: opacity 0.5s;
   opacity: 0;
 }
