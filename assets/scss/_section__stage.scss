@@ -8,6 +8,16 @@
   align-items: center;
   align-content: center;
   padding: 0;
+
+  .description {
+    .title {
+      text-align: left;
+      @media (max-width: 599px) {
+        text-align: center;
+      }
+    }
+  }
+
   &:before {
     content: '';
     position: absolute;

@@ -1375,6 +1375,14 @@ hr.star.star--blue {
   align-content: center;
   padding: 0;
 }
+.section--stage .description .title {
+  text-align: left;
+}
+@media (max-width: 599px) {
+  .section--stage .description .title {
+    text-align: center;
+  }
+}
 .section--stage:before {
   content: "";
   position: absolute;
@@ -1889,7 +1897,7 @@ hr.star.star--blue {
   font-weight: 500;
   font-family: var(--italic);
   font-style: italic;
-  padding: 20px 40px;
+  padding: 20px clamp(24px, 2.7778vw, 71px);
 }
 .stage-single__content i span {
   display: flex;
@@ -1921,6 +1929,24 @@ hr.star.star--blue {
   background: url("../img/sound.webp") no-repeat center center/cover;
   width: clamp(18px, 1.25vw, 32px);
   height: clamp(18px, 1.25vw, 32px);
+}
+.stage-single__content .poem {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px;
+}
+.stage-single__content .poem b {
+  display: block;
+  margin-bottom: -10px;
+  text-align: center;
+  width: 100%;
+}
+.stage-single__content .poem p {
+  width: 100%;
 }
 
 .fix-buttons-panel {

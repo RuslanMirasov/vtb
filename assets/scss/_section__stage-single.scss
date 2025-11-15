@@ -154,7 +154,7 @@
     font-weight: 500;
     font-family: var(--italic);
     font-style: italic;
-    padding: 20px 40px;
+    padding: 20px myclamp(24px, 40px, 1440px, 2560px);
 
     span {
       display: flex;
@@ -191,6 +191,25 @@
     background: url('../img/sound.webp') no-repeat center center/cover;
     width: myclamp(18px, 18px, 1440px, 2560px);
     height: myclamp(18px, 18px, 1440px, 2560px);
+  }
+
+  .poem {
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    b {
+      display: block;
+      margin-bottom: -10px;
+      text-align: center;
+      width: 100%;
+    }
+    p {
+      width: 100%;
+    }
   }
 }
 

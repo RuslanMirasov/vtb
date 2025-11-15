@@ -158,7 +158,7 @@
                                 <button class="fix-button" data-print="#print-block">
                                     Печать
                                 </button>
-                                <a href="#" class="fix-button" download>Скачать в PDF</a>
+                                <a href="#" class="fix-button" onclick="generatePDF()">Скачать в PDF</a>
                                 <button class="fix-button" data-full-screen>
                                     На полный экран
                                 </button>
@@ -175,49 +175,49 @@
                             <ul class="sidebar__buttons">
                                 <li>
                                     <button type="button" class="play-button"
-                                        data-sound-src="./../../assets/sounds/konek-gorbunok/01 intro.mp3">
+                                            data-sound-src="./../../assets/sounds/konek-gorbunok/01 intro.mp3">
                                         Вступление
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="play-button"
-                                        data-sound-src="./../../assets/sounds/konek-gorbunok/02 streetnoise.mp3">
+                                            data-sound-src="./../../assets/sounds/konek-gorbunok/02 streetnoise.mp3">
                                         Базар
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="play-button"
-                                        data-sound-src="./../../assets/sounds/konek-gorbunok/03 fanf.mp3">
+                                            data-sound-src="./../../assets/sounds/konek-gorbunok/03 fanf.mp3">
                                         Фанфары
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="play-button"
-                                        data-sound-src="./../../assets/sounds/konek-gorbunok/04 crikets.mp3">
+                                            data-sound-src="./../../assets/sounds/konek-gorbunok/04 crikets.mp3">
                                         Ночной лес
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="play-button"
-                                        data-sound-src="./../../assets/sounds/konek-gorbunok/05 music.mp3">
+                                            data-sound-src="./../../assets/sounds/konek-gorbunok/05 music.mp3">
                                         Танец жар-птиц
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="play-button"
-                                        data-sound-src="./../../assets/sounds/konek-gorbunok/06 sea.mp3">
+                                            data-sound-src="./../../assets/sounds/konek-gorbunok/06 sea.mp3">
                                         Океан
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="play-button"
-                                        data-sound-src="./../../assets/sounds/konek-gorbunok/07 fish.mp3">
+                                            data-sound-src="./../../assets/sounds/konek-gorbunok/07 fish.mp3">
                                         Рыба-кит
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="play-button"
-                                        data-sound-src="./../../assets/sounds/konek-gorbunok/08 musicend.mp3">
+                                            data-sound-src="./../../assets/sounds/konek-gorbunok/08 musicend.mp3">
                                         Заключение
                                     </button>
                                 </li>
@@ -248,7 +248,7 @@
                                 </li>
                                 <li>
                                     <button type="button" class="select-button" data-random-color
-                                        data-name="КОНЁК-ГОРБУНОК">
+                                            data-name="КОНЁК-ГОРБУНОК">
                                         Конёк-Горбунок
                                     </button>
                                 </li>
@@ -277,7 +277,8 @@
             <article class="stage-single__content" id="print-block">
                 <h3 class="title title--28 blue">Аннотация</h3>
 
-                <i class="full">Сказка про доброго Ивана, про верного Конька-Горбунка,
+                <i class="full">
+                    Сказка про доброго Ивана, про верного Конька-Горбунка,
                     про завистливого царя и про чудо, которое встречается на
                     каждом шагу. А еще инструкция по созданию простого,
                     свободного и фантазийного домашнего театра, где возможно
@@ -297,12 +298,15 @@
                 </p>
                 <h3 class="title title--28 blue">Действие первое</h3>
 
-                <i class="full">Перед занавесом появляется Глашатай, трубит в трубу,
-                    прокашливается, пробует голос.</i>
+                <i class="full">
+                    Перед занавесом появляется Глашатай, трубит в трубу,
+                    прокашливается, пробует голос.
+                </i>
 
                 <h4>ПЕРВАЯ СЦЕНА</h4>
                 <p>
-                    <i class="full">Знакомство зрителей с Иваном и Коньком-Горбунком.
+                    <i class="full">
+                        Знакомство зрителей с Иваном и Коньком-Горбунком.
                         Действие происходит там, где вы определили место для
                         сцены. Ничего специального не нужно. Только артисты
                         и зрители.
@@ -340,13 +344,16 @@
                 </p>
 
                 <p class="stage-single__content--sound">
-                    <i><span>Резвятся!</span>
-                        <span>ВДРУГ (важное для театра слово)! МУЗЫКА!
+                    <i>
+                        <span>Резвятся!</span>
+                        <span>
+                            ВДРУГ (важное для театра слово)! МУЗЫКА!
                             <button class="stage-single__content--btn" type="button"
-                                data-sound-src="./../../assets/sounds/konek-gorbunok/bear.mp3">
+                                    data-sound-src="./../../assets/sounds/konek-gorbunok/bear.mp3">
                             </button>
                             СВЕТ!
-                        </span></i>
+                        </span>
+                    </i>
                 </p>
 
                 <b>ИВАН:</b><br />
@@ -407,7 +414,7 @@
                 <p class="stage-single__content--sound">
                     Базар
                     <button class="stage-single__content--btn" type="button"
-                        data-sound-src="./../../assets/sounds/konek-gorbunok/02 streetnoise.mp3">
+                            data-sound-src="./../../assets/sounds/konek-gorbunok/02 streetnoise.mp3">
                     </button>
 
                 </p>
@@ -425,7 +432,7 @@
                 <p class="stage-single__content--sound">
                     <i>Входит царь</i>
                     <button class="stage-single__content--btn" type="button"
-                        data-sound-src="./../../assets/sounds/konek-gorbunok/03 fanf.mp3">
+                            data-sound-src="./../../assets/sounds/konek-gorbunok/03 fanf.mp3">
                     </button>
 
                 </p>
@@ -547,7 +554,7 @@
                 <b>ИВАН:</b><br />
                 <p data-name="ИВАН" class="stage-single__content--verse">
                     Вот и полночь наступила <button class="stage-single__content--btn" type="button"
-                        data-sound-src="./../../assets/sounds/konek-gorbunok/04 crikets.mp3">
+                                                    data-sound-src="./../../assets/sounds/konek-gorbunok/04 crikets.mp3">
                     </button>.<br />
                     Я устал, ушла вся сила,<br />
                     А убраться очень надо…<br />
@@ -720,13 +727,15 @@
                 </p>
 
                 <p class="stage-single__content--sound">
-                    <i><span>Иван прячется в засаде, прилетают жар-птицы</span>
+                    <i>
+                        <span>Иван прячется в засаде, прилетают жар-птицы</span>
                         <span>
                             <button class="stage-single__content--btn" type="button"
-                                data-sound-src="./../../assets/sounds/konek-gorbunok/05 music.mp3">
+                                    data-sound-src="./../../assets/sounds/konek-gorbunok/05 music.mp3">
                             </button>
                             и начинают танцевать.
-                        </span></i>
+                        </span>
+                    </i>
                 </p>
 
                 <b>ИВАН:</b><br />
@@ -760,7 +769,7 @@
                 <p class="stage-single__content--sound">
                     Берег океана
                     <button class="stage-single__content--btn" type="button"
-                        data-sound-src="./../../assets/sounds/konek-gorbunok/06 sea.mp3">
+                            data-sound-src="./../../assets/sounds/konek-gorbunok/06 sea.mp3">
                     </button>
 
                 </p>
@@ -785,8 +794,12 @@
                     Нет уж! Спать я здесь не буду!
                 </p>
 
-                <p><i class="full">Иван садится в засаде. Подходит Царевна, напевает что-то, Иван засыпает, но вовремя
-                        спохватывается, щипает себя.</i></p>
+                <p>
+                    <i class="full">
+                        Иван садится в засаде. Подходит Царевна, напевает что-то, Иван засыпает, но вовремя
+                        спохватывается, щипает себя.
+                    </i>
+                </p>
 
 
 
@@ -935,7 +948,7 @@
                 <p class="stage-single__content--sound">
                     Рыба-кит открывает рот, из него выплывают корабли
                     <button class="stage-single__content--btn" type="button"
-                        data-sound-src="./../../assets/sounds/konek-gorbunok/07 fish.mp3">
+                            data-sound-src="./../../assets/sounds/konek-gorbunok/07 fish.mp3">
                     </button>
 
                 </p>
@@ -1109,7 +1122,7 @@
                 <p class="stage-single__content--sound">
                     <i>Играют свадьбу</i>
                     <button class="stage-single__content--btn" type="button"
-                        data-sound-src="./../../assets/sounds/konek-gorbunok/08 musicend.mp3">
+                            data-sound-src="./../../assets/sounds/konek-gorbunok/08 musicend.mp3">
                     </button>
 
                 </p>
@@ -1165,6 +1178,27 @@
     </menu>
 
     <script src=" ./../../assets/js/scripts.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function generatePDF() {
+            const element = document.getElementById('print-block');
+            console.log(element);
+            const opt = {
+                margin: 10,
+                filename: 'Пьеса.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, letterRendering: true },
+                jsPDF: { unit: 'pt', format: 'letter', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            html2pdf()
+                .set(opt)
+                .from(element)
+                .save();
+        }
+    </script>
 </body>
 
 </html>
