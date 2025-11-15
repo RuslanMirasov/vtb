@@ -1167,6 +1167,11 @@ hr.star.star--blue {
 .section--hero .titles .subtitle {
   max-width: clamp(490px, 34.0278vw, 871px);
 }
+@media (min-width: 1921px) {
+  .section--hero .titles {
+    padding-top: 5svh;
+  }
+}
 @media (max-width: 1279px) {
   .section--hero .titles .title {
     max-width: 500px;
@@ -1225,11 +1230,31 @@ hr.star.star--blue {
   height: calc(103.7svh - 180px);
   margin: 0px auto;
 }
+@media (min-width: 1441px) {
+  .foue .scroll-area .foue__navigation {
+    height: calc(100svh - 180px);
+  }
+}
+@media (min-width: 1921px) {
+  .foue .scroll-area .foue__navigation {
+    height: calc(92svh - 180px);
+  }
+}
 .foue .scroll-area .foue__navigation .foue-image {
   height: calc(103.7svh - 180px);
   -o-object-fit: contain;
      object-fit: contain;
   margin: auto;
+}
+@media (min-width: 1441px) {
+  .foue .scroll-area .foue__navigation .foue-image {
+    height: calc(100svh - 180px);
+  }
+}
+@media (min-width: 1921px) {
+  .foue .scroll-area .foue__navigation .foue-image {
+    height: calc(92svh - 180px);
+  }
 }
 
 .door {
@@ -1242,26 +1267,31 @@ hr.star.star--blue {
   bottom: 13.3223%;
 }
 .door.door--director {
-  left: 10.6%;
+  left: 10.9%;
 }
 .door.door--buffet {
-  left: 21.1%;
+  left: 21.39%;
 }
 .door.door--makeup {
-  left: 31.6%;
+  left: 31.88%;
 }
 .door.door--stage {
-  width: 13.2%;
+  width: 13.5%;
   left: 43.4%;
 }
 .door.door--wardrobe {
-  left: 60.7%;
+  left: 60.9%;
 }
 .door.door--orchestra {
-  left: 70.92%;
+  left: 71.1%;
+}
+.door.door--vtb-offer {
+  left: 81.33%;
 }
 .door.door--secret {
-  left: 82.5%;
+  width: 6.8%;
+  left: auto;
+  right: 0%;
   height: 54%;
   bottom: 12%;
 }
@@ -1270,7 +1300,7 @@ hr.star.star--blue {
   position: absolute;
   pointer-events: none;
   bottom: 33%;
-  left: 80.5%;
+  left: 90.5%;
   width: 4.3055%;
 }
 

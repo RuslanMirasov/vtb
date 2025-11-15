@@ -134,8 +134,8 @@ export const initScrollArea = () => {
   const getLimits = () => {
     const maxScroll = scrollArea.scrollWidth - scrollArea.clientWidth;
     return {
-      min: maxScroll * 0.08,
-      max: maxScroll * 0.81,
+      min: maxScroll * 0, // 0.08
+      max: maxScroll * maxScroll, // 0.81
       maxScroll,
     };
   };

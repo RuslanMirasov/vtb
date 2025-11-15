@@ -3,6 +3,7 @@
   flex-direction: column;
   min-height: 100svh;
   transform: scale(0);
+
   &.show {
     opacity: 1;
     transform: scale(1);
@@ -11,6 +12,9 @@
     padding-top: 32px;
     .subtitle {
       max-width: myclamp(490px, 490px, 1440px, 2560px);
+    }
+    @media (min-width: 1921px) {
+      padding-top: 5svh;
     }
     @media (max-width: 1279px) {
       .title {
@@ -61,6 +65,7 @@
     position: relative;
     margin-bottom: -20px;
     flex: 1;
+
     .foue__navigation {
       display: inline-flex;
       position: relative;
@@ -68,10 +73,22 @@
       align-items: flex-end;
       align-content: flex-end;
       height: calc(103.7svh - 180px);
+      @media (min-width: 1441px) {
+        height: calc(100svh - 180px);
+      }
+      @media (min-width: 1921px) {
+        height: calc(92svh - 180px);
+      }
       margin: 0px auto;
 
       .foue-image {
         height: calc(103.7svh - 180px);
+        @media (min-width: 1441px) {
+          height: calc(100svh - 180px);
+        }
+        @media (min-width: 1921px) {
+          height: calc(92svh - 180px);
+        }
         object-fit: contain;
         margin: auto;
       }
@@ -88,26 +105,31 @@
   left: 0px;
   bottom: 13.3223%;
   &.door--director {
-    left: 10.6%;
+    left: 10.9%;
   }
   &.door--buffet {
-    left: 21.1%;
+    left: 21.39%;
   }
   &.door--makeup {
-    left: 31.6%;
+    left: 31.88%;
   }
   &.door--stage {
-    width: 13.2%;
+    width: 13.5%;
     left: 43.4%;
   }
   &.door--wardrobe {
-    left: 60.7%;
+    left: 60.9%;
   }
   &.door--orchestra {
-    left: 70.92%;
+    left: 71.1%;
+  }
+  &.door--vtb-offer {
+    left: 81.33%;
   }
   &.door--secret {
-    left: 82.5%;
+    width: 6.8%;
+    left: auto;
+    right: 0%;
     height: 54%;
     bottom: 12%;
   }
@@ -117,7 +139,7 @@
   position: absolute;
   pointer-events: none;
   bottom: 33%;
-  left: 80.5%;
+  left: 90.5%;
   width: 4.3055%;
 }
 
