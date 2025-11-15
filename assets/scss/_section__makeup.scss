@@ -100,4 +100,13 @@ section[data-tab] {
     bottom: 0px;
     width: 100%;
   }
+  p {
+    position: absolute;
+    display: inline-flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: myclamp(32px, 40px, 1440px, 2560px);
+  }
 }
