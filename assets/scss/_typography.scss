@@ -48,6 +48,9 @@
   &.title--26 {
     font-size: myclamp(26px, 26px, 1440px, 2560px);
   }
+  &.title--24 {
+    font-size: myclamp(24px, 24px, 1440px, 2560px);
+  }
 }
 
 .subtitle {

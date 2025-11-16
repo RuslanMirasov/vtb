@@ -67,6 +67,7 @@ export const initNavigationMenu = () => {
   const selectPlayBtn = document.querySelector('.select-a-play');
   const fullScreenButton = document.querySelector('.full-screen-button');
   const mobilNavMenu = document.querySelector('.mobil-nav-menu');
+  const goBackButton = document.querySelector('.go-back');
 
   const toggleMenu = () => {
     burger?.classList.toggle('open');
@@ -77,6 +78,7 @@ export const initNavigationMenu = () => {
     selectPlayBtn?.classList.toggle('hidden');
     fullScreenButton?.classList.toggle('hidden');
     mobilNavMenu?.classList.toggle('hidden');
+    goBackButton?.classList.toggle('hidden');
     fixedBackground?.classList.toggle('move');
   };
 

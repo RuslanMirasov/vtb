@@ -11,7 +11,6 @@
     <link rel="preload" as="image" href="./../assets/img/header/column-right.webp" />
     <link rel="preload" as="image" href="./../assets/img/logo.svg" />
     <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./../assets/css/styles.min.css" />
     <title>ВТБ | Буфет</title>
   </head>
@@ -79,14 +78,35 @@
     <div class="fixed-background"></div>
 
     <main class="main">
-      <section class="section section--makeup">
+      <section class="section section--buffet">
         <div class="titles">
+          <hr class="star show-in-mobil" />
           <h1 class="title title--h1">Буфет</h1>
           <hr />
-          <p class="subtitle subtitle--16">Объявлен антракт! <br />Самое время заглянуть в театральный буфет.</p>
+          <p class="subtitle subtitle--16">Объявлен антракт! Самое время заглянуть в театральный буфет.</p>
         </div>
 
-        <div class="container"></div>
+        <div class="container">
+          <nav class="buffet-navigation">
+            <ul>
+              <li>
+                <img src="./../assets/img/buffet/kanape.webp" alt="ВТБ" loading="lazy" />
+                <h2>Лёгкая театральная закуска</h2>
+                <p>Готовим закуски, которые можно есть во время репетиций, антракте и после спектакля.</p>
+                <a href="./../buffet/food" class="button"> <span>Подробнее</span> </a>
+              </li>
+              <li>
+                <img src="./../assets/img/buffet/candle.webp" alt="ВТБ" loading="lazy" />
+                <h2>Оформление стола</h2>
+                <p>
+                  Создайте атмосферу театра и&nbsp;волшебного праздника прямо на&nbsp;домашнем столе — пусть каждый элемент сияет и&nbsp;вдохновляет
+                  гостей.
+                </p>
+                <a href="./../buffet/table" class="button"> <span>Подробнее</span> </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
     </main>
 
@@ -98,7 +118,6 @@
       <img src="./../assets/img/header/column-right.webp" alt="ВТБ" />
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./../assets/js/scripts.js" type="module"></script>
   </body>
 </html>

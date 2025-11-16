@@ -375,6 +375,44 @@
           background: url('../img/stage/icon-peoples.webp') no-repeat center center/cover;
         }
       }
+      &.state {
+        &:before {
+          content: '';
+          width: myclamp(17px, 25px, 1440px, 2560px);
+          height: myclamp(24px, 36px, 1440px, 2560px);
+          background: url('../img/stage/icon-state.webp') no-repeat center center/cover;
+        }
+      }
+    }
+
+    &.small {
+      gap: myclamp(20px, 20px, 1440px, 2560px);
+      padding: myclamp(8px, 8px, 1440px, 2560px) myclamp(14px, 14px, 1440px, 2560px);
+      img {
+        height: myclamp(24px, 24px, 1440px, 2560px);
+      }
+      li {
+        gap: myclamp(8px, 8px, 1440px, 2560px);
+        font-size: myclamp(14px, 14px, 1440px, 2560px);
+        &.time {
+          &:before {
+            width: myclamp(24px, 24px, 1440px, 2560px);
+            height: myclamp(24px, 24px, 1440px, 2560px);
+          }
+        }
+        &.peoples {
+          &:before {
+            width: myclamp(32px, 32px, 1440px, 2560px);
+            height: myclamp(24px, 24px, 1440px, 2560px);
+          }
+        }
+        &.state {
+          &:before {
+            width: myclamp(17px, 17px, 1440px, 2560px);
+            height: myclamp(24px, 24px, 1440px, 2560px);
+          }
+        }
+      }
     }
   }
 }

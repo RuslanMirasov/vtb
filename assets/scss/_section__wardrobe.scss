@@ -119,9 +119,6 @@
 
 .breadcrumb-link {
   font-size: myclamp(14px, 14px, 1440px, 2560px);
-  @media (min-width: 768px) {
-    margin-bottom: -10px;
-  }
 }
 
 .post {
@@ -276,7 +273,6 @@
     width: 100%;
     flex-direction: column;
     gap: myclamp(20px, 20px, 1440px, 2560px);
-    width: 100%;
     max-width: myclamp(460px, 460px, 1440px, 2560px);
 
     li {
@@ -296,6 +292,36 @@
         flex-shrink: 0;
         @media (max-width: 767px) {
           margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  &.small {
+    display: inline-flex;
+    width: auto;
+    padding: myclamp(30px, 40px, 1440px, 2560px) myclamp(20px, 30px, 1440px, 2560px);
+    margin-top: myclamp(20px, 20px, 1440px, 2560px);
+    gap: myclamp(20px, 24px, 1440px, 2560px);
+    .title {
+      font-size: myclamp(28px, 28px, 1440px, 2560px);
+    }
+
+    &.rotated {
+      transform: rotate(2deg);
+    }
+
+    ul {
+      flex-direction: column;
+      gap: myclamp(20px, 20px, 1440px, 2560px);
+      max-width: myclamp(460px, 460px, 1440px, 2560px);
+
+      li {
+        gap: myclamp(10px, 20px, 1440px, 2560px);
+        font-size: myclamp(18px, 20px, 1440px, 2560px);
+        &:before {
+          width: myclamp(15px, 21px, 1440px, 2560px);
+          height: myclamp(17px, 23px, 1440px, 2560px);
         }
       }
     }

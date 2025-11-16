@@ -208,3 +208,34 @@
     bottom: 70px;
   }
 }
+
+.go-back {
+  display: flex;
+  position: absolute;
+  z-index: 15;
+  left: myclamp(35px, 80px, 1440px, 1440px);
+  top: myclamp(90px, 120px, 1440px, 1440px);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: myclamp(32px, 42px, 1440px, 2560px);
+  height: myclamp(32px, 42px, 1440px, 2560px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+
+  img {
+    height: 100%;
+  }
+}
+
+.loaded {
+  .go-back {
+    opacity: 1;
+    pointer-events: all;
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}

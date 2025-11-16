@@ -270,3 +270,10 @@ hr {
 .stage-single__content--verse {
   margin: 0 auto;
 }
+
+.show-in-mobil {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
