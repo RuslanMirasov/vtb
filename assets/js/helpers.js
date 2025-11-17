@@ -68,6 +68,7 @@ export const initNavigationMenu = () => {
   const fullScreenButton = document.querySelector('.full-screen-button');
   const mobilNavMenu = document.querySelector('.mobil-nav-menu');
   const goBackButton = document.querySelector('.go-back');
+  const tipNavigation = document.querySelector('.tip-navigation');
 
   const toggleMenu = () => {
     burger?.classList.toggle('open');
@@ -80,6 +81,7 @@ export const initNavigationMenu = () => {
     mobilNavMenu?.classList.toggle('hidden');
     goBackButton?.classList.toggle('hidden');
     fixedBackground?.classList.toggle('move');
+    tipNavigation?.classList.toggle('hidden');
   };
 
   if (burger) burger.addEventListener('click', toggleMenu);
@@ -90,6 +92,12 @@ export const initLinksMiddleware = () => {
   document.addEventListener('click', e => {
     const link = e.target.closest('a');
     if (!link) return;
+
+    if (link.hasAttribute('data-closed')) {
+      e.preventDefault();
+      alert('В помещении идут приготовления. Скоро оно распахнет для вас свои двери!');
+      return;
+    }
 
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('javascript:') || href.startsWith('mailto:') || href.startsWith('tel:')) return;

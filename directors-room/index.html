@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#0A2896" />
-    <meta name="description" content="President" />
+    <meta name="description" content="Кабинет режиссёра" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" as="image" href="./../assets/img/header/bg.webp" />
@@ -11,10 +11,10 @@
     <link rel="preload" as="image" href="./../assets/img/header/column-right.webp" />
     <link rel="preload" as="image" href="./../assets/img/logo.svg" />
     <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./../assets/css/styles.min.css" />
     <title>ВТБ | Кабинет режиссёра</title>
   </head>
+
   <body class="body">
     <!--HEADER-->
     <header class="header">
@@ -73,20 +73,27 @@
           </a>
         </li>
       </ul>
-      <a href="./../holiday-map" class="menu__link map-link">Карта ёлок</a>
+      <a href="./../holiday-map" data-closed class="menu__link map-link">Карта ёлок</a>
     </nav>
 
     <div class="fixed-background"></div>
 
     <main class="main">
-      <section class="section section--makeup">
+      <section class="section section--director">
         <div class="titles">
+          <hr class="star show-in-mobil" />
           <h1 class="title title--h1">Кабинет режиссёра</h1>
           <hr />
           <p class="subtitle subtitle--16">
-            В волшебном театре можно импровизировать, как вам угодно, ведь здесь&nbsp;- пространство для&nbsp;фантазии. Наши авторы подобрали
-            несколько идей для&nbsp;вдохновения.
+            Занавес!<br />
+            Узнайте у&nbsp;режиссеров и&nbsp;драматургов, как поставить пьесу дома.
           </p>
+        </div>
+        <div class="director-hero">
+          <div class="buttons">
+            <a href="./tips" class="button"> <span>Советы</span> </a>
+            <a href="./check-list/" class="button"> <span>Чек-лист</span> </a>
+          </div>
         </div>
       </section>
     </main>
@@ -99,7 +106,6 @@
       <img src="./../assets/img/header/column-right.webp" alt="ВТБ" />
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./../assets/js/scripts.js" type="module"></script>
   </body>
 </html>

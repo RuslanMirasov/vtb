@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#0A2896" />
-    <meta name="description" content="President" />
+    <meta name="description" content="Создайте свой домашний театр с ВТБ! Пьесы по любимым сказкам, сценарии и вдохновение для волшебных вечеров." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" as="image" href="./assets/img/header/bg.webp" />
@@ -13,8 +13,9 @@
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
-    <title>ВТБ</title>
+    <title>Домашний театр ВТБ — новогодние сказки для всей семьи</title>
   </head>
+
   <body class="body">
     <!--HEADER-->
     <header class="header scaleble">
@@ -34,7 +35,6 @@
           <a href="./stage" class="menu__link">
             <img src="./assets/img/header/nav1.webp" alt="ВТБ" />
             <b>Сцена</b>
-            <p>Пьесы для домашнего&nbsp;театра</p>
             <p>Ставьте пьесы для домашнего театра</p>
           </a>
         </li>
@@ -42,7 +42,6 @@
           <a href="./wardrobe" class="menu__link">
             <img src="./assets/img/header/nav2.webp" alt="ВТБ" />
             <b>Костюмерная</b>
-            <p>Подборка нарядов для&nbsp;главных героев</p>
             <p>Подберите яркие наряды&nbsp;героев</p>
           </a>
         </li>
@@ -50,7 +49,6 @@
           <a href="./makeup-room" class="menu__link">
             <img src="./assets/img/header/nav3.webp" alt="ВТБ" />
             <b>Гримёрная</b>
-            <p>Идеи макияжа для сказочного&nbsp;преображения</p>
             <p>Используйте наши идеи сказочных образов</p>
           </a>
         </li>
@@ -58,7 +56,6 @@
           <a href="./orchestra-pit" class="menu__link">
             <img src="./assets/img/header/nav4.webp" alt="ВТБ" />
             <b>Оркестровая яма</b>
-            <p>Музыкальное сопровождение вашей постановки</p>
             <p>Послушайте аудиоверсии&nbsp;сказок</p>
           </a>
         </li>
@@ -66,7 +63,6 @@
           <a href="./buffet" class="menu__link">
             <img src="./assets/img/header/nav5.webp" alt="ВТБ" />
             <b>Буфет</b>
-            <p>Украшения и рецепты для праздничного стола</p>
             <p>Создайте праздничное настроение</p>
           </a>
         </li>
@@ -74,12 +70,11 @@
           <a href="./directors-room" class="menu__link">
             <img src="./assets/img/header/nav6.webp" alt="ВТБ" />
             <b>Кабинет режиссёра</b>
-            <p>Советы для домашнего спектакля и&nbsp;чек-лист для подготовки к празднику</p>
             <p>Откройте пространство для&nbsp;творчества</p>
           </a>
         </li>
       </ul>
-      <a href="./holiday-map" class="menu__link map-link">Карта ёлок</a>
+      <a href="./holiday-map" data-closed class="menu__link map-link">Карта ёлок</a>
     </nav>
 
     <!--PRELOADER-->
@@ -87,8 +82,8 @@
       <div class="preloader__content">
         <div class="preloader__image"></div>
         <div class="preloader__text">
-          <h2>Новогодний праздник начинается здесь</h2>
-          <p>Мы создаём его вместе с ВТБ</p>
+          <h2>Домашний театр открывает двери</h2>
+          <p>Создаем сказку вместе с ВТБ</p>
         </div>
       </div>
     </div>
@@ -100,7 +95,8 @@
         <div class="titles">
           <h1 class="title title--h1">Присоединяйтесь к&nbsp;волшебству</h1>
           <p class="subtitle">
-            Прежде чем начать волшебное путешествие мы предлагаем сдать повседневные заботы в&nbsp;гардероб и&nbsp;ознакомиться с&nbsp;программкой:
+            ВТБ пригласил театральных режиссеров и драматургов создать пьесы для домашнего театра.<br />
+            Вас ждет много идей для праздника.
           </p>
         </div>
 
@@ -115,8 +111,8 @@
                 <a href="./stage" class="door door--stage"></a>
                 <a href="./wardrobe" class="door door--wardrobe"></a>
                 <a href="./orchestra-pit" class="door door--orchestra"></a>
-                <!-- <a href="./vtb-offer" class="door door--vtb-offer"></a>
-                <a href="./secret-room" class="door door--secret"></a> -->
+                <a href="./vtb-offer" data-closed class="door door--vtb-offer"></a>
+                <a href="./secret-room" data-closed class="door door--secret"></a>
                 <img src="./assets/img/foue/key.gif" alt="ВТБ" class="key" />
               </div>
             </div>
@@ -146,7 +142,9 @@
           <button type="button" class="popup__close" data-popup-close></button>
           <h2 class="title title--28">Пройдите тест</h2>
           <p class="subtitle subtitle--16">Узнайте, какая пьеса <br />подойдет&nbsp;вам</p>
-          <button class="button" data-popup-open="test-step-1"><span>Начать</span></button>
+          <button class="button" data-popup-open="test-step-1">
+            <span>Начать</span>
+          </button>
         </div>
       </div>
 
@@ -191,7 +189,9 @@
             </label>
 
             <div class="form-buttons">
-              <button type="submit" class="button"><span>Далее</span></button>
+              <button type="submit" class="button">
+                <span>Далее</span>
+              </button>
             </div>
           </form>
         </div>
@@ -233,8 +233,12 @@
             </label>
 
             <div class="form-buttons">
-              <button type="button" class="button button--white" data-popup-open="test-step-1"><span>Назад</span></button>
-              <button type="submit" class="button"><span>Далее</span></button>
+              <button type="button" class="button button--white" data-popup-open="test-step-1">
+                <span>Назад</span>
+              </button>
+              <button type="submit" class="button">
+                <span>Далее</span>
+              </button>
             </div>
           </form>
         </div>
@@ -278,8 +282,12 @@
             </label>
 
             <div class="form-buttons">
-              <button type="button" class="button button--white" data-popup-open="test-step-2"><span>Назад</span></button>
-              <button type="submit" class="button"><span>Далее</span></button>
+              <button type="button" class="button button--white" data-popup-open="test-step-2">
+                <span>Назад</span>
+              </button>
+              <button type="submit" class="button">
+                <span>Далее</span>
+              </button>
             </div>
           </form>
         </div>

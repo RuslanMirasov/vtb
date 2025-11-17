@@ -199,11 +199,15 @@
   width: 100%;
   max-width: myclamp(1060px, 1060px, 1440px, 2560px);
   margin: 0 auto;
-  margin-bottom: myclamp(30px, 50px, 1440px, 2560px);
+  //margin-bottom: myclamp(30px, 50px, 1440px, 2560px);
   justify-content: space-between;
   align-items: flex-start;
   align-content: flex-start;
   gap: 40px 5%;
+
+  .subtitle {
+    max-width: 100%;
+  }
 
   .post-description__content {
     margin-bottom: myclamp(10px, 20px, 1440px, 2560px);
@@ -269,5 +273,35 @@
   .title,
   .subtitle {
     text-align: left;
+  }
+}
+
+.white-box {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  border-radius: 30px;
+  background: url(../img/wardrobe/bg.webp) no-repeat center center / cover;
+  padding: myclamp(20px, 32px, 1440px, 2560px);
+  margin-top: myclamp(14px, 20px, 1440px, 2560px);
+  color: var(--blue);
+  text-align: center;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: myclamp(24px, 24px, 1440px, 2560px);
+  }
+
+  p {
+    font-size: myclamp(16px, 16px, 1440px, 2560px);
+    line-height: 1.4;
+    font-weight: 500;
   }
 }

@@ -5,6 +5,7 @@
   --bg: #0024b3;
   --blue: #0a2896;
   --blue-medium: #1e4bd2;
+  --cyan: #00aaff;
   --color: #ffffff;
   --white: #ffffff;
   --black: #000000;
@@ -28,6 +29,8 @@
 @import 'section__wardrobe';
 @import 'section__makeup';
 @import 'section__buffet';
+@import 'section_director';
+@import 'section__orchestra';
 @import 'soon';
 @import 'popup';
 @import 'forms';

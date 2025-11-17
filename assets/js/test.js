@@ -24,7 +24,7 @@ const results = [
   {
     title: '«Зайкина избушка»',
     image: 'assets/img/stage/4_head.webp',
-    url: 'stage/zayachya-izbushka',
+    url: 'stage/zaikina-izbushka',
     combination: [
       {
         question1: [],

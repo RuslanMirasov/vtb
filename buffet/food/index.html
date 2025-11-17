@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#0A2896" />
-    <meta name="description" content="Лёгкая театральная закуска" />
+    <meta name="description" content="Рецепты" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" as="image" href="./../../assets/img/header/bg.webp" />
@@ -13,8 +13,9 @@
     <link rel="icon" type="image/x-icon" href="./../../assets/img/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./../../assets/css/styles.min.css" />
-    <title>Лёгкая театральная закуска</title>
+    <title>Рецепты</title>
   </head>
+
   <body class="body">
     <!--HEADER-->
     <header class="header">
@@ -73,7 +74,7 @@
           </a>
         </li>
       </ul>
-      <a href="./../../holiday-map" class="menu__link map-link">Карта ёлок</a>
+      <a href="./../../holiday-map" data-closed class="menu__link map-link">Карта ёлок</a>
     </nav>
 
     <div class="fixed-background"></div>
@@ -89,64 +90,142 @@
           <hr class="star show-in-mobil" />
           <a href="./../../buffet" class="breadcrumb-link">Буфет</a>
           <hr />
-          <h1 class="title title--h1">Лёгкая театральная закуска</h1>
-          <p class="subtitle subtitle--16">Готовим закуски, которые можно есть&nbsp;во&nbsp;время репетиций, антракте и&nbsp;после спектакля</p>
+          <h1 class="title title--h1">Рецепты</h1>
+          <p class="subtitle subtitle--16">
+            Попробуйте узнать, какая сказка на&nbsp;вкус&nbsp;–&nbsp;чем угощают в&nbsp;Зайкиной избушке, какие печенья получаются в&nbsp;Емелиной
+            печи и&nbsp;почему Рыба-кит проглотила столько кораблей
+          </p>
         </div>
 
         <div class="container">
-          <div class="test-image"><img src="./../../assets/img/stage/3_head.gif" alt="ВТБ" class="circle__image" /></div>
-          <h2 class="title title--h4">Сказка<br />«По щучьему велению»</h2>
-
-          <div
-            class="food-slider"
-            data-slider
-            data-speed="500"
-            data-loop="true"
-            data-slides-per-view="4,3,1"
-            data-slides-per-group="1,1,1"
-            data-space-between="40,20,40"
-          >
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <a href="./1" class="swiper-slide">
-                  <div class="food-slider__image">
-                    <img src="./../../assets/img/buffet/slide-1.webp" alt="ВТБ" />
-                  </div>
-                  <p class="food-slider__text">Свекольные слайсы с&nbsp;сыром фета «Восточный Камень»</p>
-                </a>
-                <a href="./1" class="swiper-slide">
-                  <div class="food-slider__image">
-                    <img src="./../../assets/img/buffet/slide-2.webp" alt="ВТБ" />
-                  </div>
-                  <p class="food-slider__text">Елочки</p>
-                </a>
-                <a href="./1" class="swiper-slide">
-                  <div class="food-slider__image">
-                    <img src="./../../assets/img/buffet/slide-3.webp" alt="ВТБ" />
-                  </div>
-                  <p class="food-slider__text">Брускетики свекольно-селёдочные</p>
-                </a>
-                <a href="./1" class="swiper-slide">
-                  <div class="food-slider__image">
-                    <img src="./../../assets/img/buffet/slide-4.webp" alt="ВТБ" />
-                  </div>
-                  <p class="food-slider__text">Профитрольки</p>
-                </a>
-                <a href="./1" class="swiper-slide">
-                  <div class="food-slider__image">
-                    <img src="./../../assets/img/placeholder.webp" alt="ВТБ" />
-                  </div>
-                  <p class="food-slider__text">Lorem, ipsum dolor sit amet consectetur.</p>
-                </a>
-              </div>
-              <button type="button" class="swiper-arrow" data-arrow-prev></button>
-              <button type="button" class="swiper-arrow" data-arrow-next></button>
+          <article class="food-article">
+            <div class="food-article__image">
+              <img src="./../../assets/img/buffet/slide-1.webp" alt="ВТБ" />
             </div>
+            <div class="food-article__text">
+              <h2 class="title title--h4">«Морковки» с&nbsp;закусками</h2>
+              <p class="subtitle subtitle--16">
+                Хочется похрустеть во&nbsp;время спектакля? В&nbsp;«Зайкиной избушке» это могут делать не&nbsp;только зрители, но&nbsp;и&nbsp;актеры.
+              </p>
+
+              <div class="white-box">
+                <h3>Совет</h3>
+                <p>
+                  Закрутите целлофан в&nbsp;трубочку, зафиксируйте скотчем и&nbsp;наполните оранжевой «начинкой»: чипсами, мармеладом или курагой.
+                  Финальный штрих&nbsp;—&nbsp;«ботва» из&nbsp;еловой веточки и&nbsp;зеленого бантика.
+                </p>
+              </div>
+            </div>
+          </article>
+          <br />
+
+          <article class="food-article">
+            <div class="food-article__image">
+              <img src="./../../assets/img/buffet/slide-2.webp" alt="ВТБ" />
+            </div>
+            <div class="food-article__text">
+              <h2 class="title title--h4">«Кораблики»</h2>
+              <p class="subtitle subtitle--16">
+                Освобожденные Коньком-Горбунком корабли становятся частью вашего волшебного стола. Для этого вам понадобятся ломтики багета, сыра,
+                колбасы и&nbsp;огурца.
+              </p>
+
+              <div class="white-box">
+                <h3>Совет</h3>
+                <p>
+                  Чтобы собрать канапе, нанизывайте на&nbsp;шпажку «паруса»: сначала маленький ломтик сыра, затем большой. Завершите мачту, скрутив
+                  ломтик колбасы в&nbsp;трубочку и&nbsp;насадив его на&nbsp;кончик. Воткните готовые паруса в&nbsp;ломтик
+                  багета&nbsp;—&nbsp;и&nbsp;съедобные кораблики готовы стать главным украшением праздника и&nbsp;вкусным угощением для гостей.
+                </p>
+              </div>
+            </div>
+          </article>
+          <br />
+
+          <article class="food-article">
+            <div class="food-article__image">
+              <img src="./../../assets/img/buffet/slide-3.webp" alt="ВТБ" />
+            </div>
+            <div class="food-article__text">
+              <h2 class="title title--h4">«Печенье из&nbsp;печки Емели»</h2>
+              <p class="subtitle subtitle--16">
+                Печь в&nbsp;нашей новогодней сказке выступает не&nbsp;только в&nbsp;роли волшебного средства передвижения. Она выполняет свои прямые
+                обязанности&nbsp;—&nbsp;печет печенье.
+              </p>
+
+              <div class="white-box">
+                <h3>Совет</h3>
+                <p>
+                  Кисточкой покройте поверхность печений белой глазурью или белым топленым шоколадом&nbsp;—&nbsp;это склеит печенья вместе.
+                  Расположите их стопкой друг на&nbsp;друге, чтобы верхнее полностью помещалось на&nbsp;нижнем. Используйте кондитерский мешочек для
+                  росписи и&nbsp;кусочек апельсина, чтобы оформить нос снеговика.
+                </p>
+              </div>
+            </div>
+          </article>
+          <br />
+
+          <!-- <div class="titles no-margin">
+          <hr class="big" />
+          <p class="subtitle">
+            Секрет театрального эффекта: <br />
+            визуальная динамика и&nbsp;блеск <br />
+            важнее симметрии.
+          </p>
+          <hr class="big invers" />
+        </div>
+
+        <br /> -->
+
+          <!-- <article class="food-article">
+          <div class="food-article__image">
+            <img src="./../../assets/img/buffet/slide-2.webp" alt="ВТБ" />
           </div>
+          <div class="food-article__text">
+            <h2 class="title title--h4">Заснеженный лес</h2>
+
+            <p class="subtitle subtitle--16">
+              Стол украшается елочными ветками, покрытыми искусственным снегом, а&nbsp;также кристаллами, имитирующему
+              лед. Кажется, будто рядом
+              прошелся Морозко.
+            </p>
+
+            <div class="stage-desctiption relative active">
+              <ul class="table small">
+                <li class="time">30 мин</li>
+                <li class="state">Средне</li>
+                <li class="peoples">6</li>
+              </ul>
+            </div>
+
+            <div class="post-description__content small rotated">
+              <h3 class="title title--h3">Ингредиенты:</h3>
+              <ul>
+                <li>Отварная или <br />запеченая свекла</li>
+                <li>Сыр Фета</li>
+                <li>Кедровые орешки</li>
+                <li>Оливковое масло</li>
+              </ul>
+            </div>
+
+            <h2 class="title title--24 ta--l">Процесс приготовления</h2>
+
+            <ul class="list">
+              <li>Свеклу нарежьте тонкими кружочками</li>
+              <li>Сверху положите кусочек феты</li>
+              <li>Сбрызните маслом</li>
+              <li>Посыпьте орешками</li>
+            </ul>
+          </div>
+        </article>
+
+        <br /> -->
+
+          <a href="./../../buffet/table/" class="button"><span>Оформление стола</span></a>
 
           <hr />
 
-          <a href="./../../secret-room" class="nex-page-link">
+          <a href="./../../secret-room" data-closed class="nex-page-link">
             <img src="./../../assets/img/header/nav7.webp" alt="ВТБ" />
             <h3>Потайная комната</h3>
             <p>Устройте веселый квест</p>

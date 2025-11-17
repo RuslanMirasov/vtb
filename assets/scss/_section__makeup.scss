@@ -110,3 +110,8 @@ section[data-tab] {
     font-size: myclamp(32px, 40px, 1440px, 2560px);
   }
 }
+
+.makeup-thumbnail {
+  width: myclamp(250px, 270px, 1440px, 2560px);
+  border-radius: myclamp(20px, 20px, 1440px, 2560px);
+}
