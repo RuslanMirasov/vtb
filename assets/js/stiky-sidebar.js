@@ -1,61 +1,36 @@
-import { debounce } from './helpers.js';
-
-let sidebar = null;
-let limitEl = null;
-let main = null;
-let sidebarBottom = 0;
-
-const getSidebarBottom = () => {
-  const sb = sidebar?.getBoundingClientRect();
-  const mc = main.getBoundingClientRect();
-
-  if (!sb) return;
-
-  return sb.bottom - mc.top + main.scrollTop;
-};
-
-const fixSidebar = () => {
-  if (!sidebar || !limitEl || !main) return;
-
-  if (window.innerWidth < 1024) {
-    sidebar.classList.remove('stiky');
-    return;
-  }
-
-  const lr = limitEl.getBoundingClientRect();
-  const mr = main.getBoundingClientRect();
-  const limit = lr.top - mr.top + main.scrollTop;
-
-  if (limit >= sidebarBottom) {
-    sidebar.classList.add('stiky');
-  } else {
-    sidebar.classList.remove('stiky');
-  }
-};
-
 export const initStikySidebar = () => {
-  sidebar = document.querySelector('[data-stiky-sidebar]');
-  limitEl = document.querySelector('[data-styky-limit]');
-  main = document.querySelector('.main');
+  const main = document.querySelector('main');
+  const sidebar = document.querySelector('.sidebar');
 
-  if (!sidebar || !limitEl || !main) return;
+  if (!sidebar || !main) return;
 
-  sidebarBottom = getSidebarBottom();
-  fixSidebar();
-};
+  let lastMainScroll = 0;
 
-export const setupStikySidebarEvents = () => {
-  const updateDebounced = debounce(() => {
-    sidebarBottom = getSidebarBottom();
-    fixSidebar();
-  }, 100);
+  const handleScroll = () => {
+    const current = main.scrollTop;
+    const delta = current - lastMainScroll;
 
-  window.addEventListener('resize', updateDebounced);
+    const stickyTop = parseInt(getComputedStyle(sidebar).top, 10);
+    const isStuck = Math.floor(sidebar.getBoundingClientRect().top) <= stickyTop;
 
-  const mainEl = document.querySelector('.main');
-  if (mainEl) {
-    mainEl.addEventListener('scroll', fixSidebar);
-  }
+    if (isStuck) {
+      sidebar.scrollTop += delta;
+    }
+
+    lastMainScroll = current;
+  };
+
+  const updateListeners = () => {
+    if (window.innerWidth >= 1024) {
+      main.addEventListener('scroll', handleScroll);
+    } else {
+      main.removeEventListener('scroll', handleScroll);
+    }
+  };
+
+  updateListeners();
+
+  window.addEventListener('resize', updateListeners);
 };
 
 export const initSidebarPopups = () => {

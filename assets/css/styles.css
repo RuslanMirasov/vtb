@@ -1912,15 +1912,24 @@ hr.star.star--blue {
 
 .sidebar {
   display: flex;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: clamp(50px, 4.1667vw, 60px);
+  height: calc(100svh - clamp(50px, 4.1667vw, 60px));
+  overflow-y: auto;
+  pointer-events: none;
   flex-direction: column;
   gap: 40px;
   width: clamp(375px, 26.0417vw, 667px);
-  margin-bottom: clamp(110px, 7.6389vw, 196px);
+  scrollbar-width: none; /* Firefox */
 }
-.sidebar.stiky {
-  position: fixed;
-  bottom: 30px;
+.sidebar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+@media (min-width: 1024px) {
+  .sidebar {
+    padding-bottom: calc(clamp(112px, 7.7778vw, 199px) + 30px);
+  }
 }
 .sidebar .subtitle {
   text-align: left;
@@ -1934,7 +1943,7 @@ hr.star.star--blue {
   align-items: center;
   align-content: center;
   gap: 40px;
-  padding: clamp(30px, 2.0833vw, 53px);
+  padding: clamp(30px, 2.7778vw, 71px) clamp(30px, 2.0833vw, 53px);
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.2);
   text-align: center;
@@ -1976,6 +1985,7 @@ hr.star.star--blue {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  pointer-events: all;
 }
 .sidebar__scroll-area.for-buttons {
   height: clamp(200px, 13.8889vw, 356px);
@@ -2002,6 +2012,14 @@ hr.star.star--blue {
   font-size: clamp(14px, 0.9722vw, 25px);
   line-height: 1.3;
   margin-left: auto;
+}
+.stage-single__content .slogan {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(14px, 0.9722vw, 25px);
+  line-height: 1.3;
+  padding-bottom: clamp(14px, 0.9722vw, 25px);
 }
 .stage-single__content p {
   display: inline-block;
@@ -2136,6 +2154,15 @@ hr.star.star--blue {
   align-items: center;
   align-content: center;
   gap: 40px;
+}
+.sidebar__item.mobil-only {
+  position: fixed;
+  z-index: 18;
+}
+@media (max-width: 1023px) {
+  .sidebar__item.mobil-only {
+    position: relative;
+  }
 }
 .sidebar__item .stage-desctiption,
 .sidebar__item [data-sidebar-popup-close] {

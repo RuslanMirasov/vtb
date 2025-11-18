@@ -5,7 +5,7 @@ import { initScrollToBlock } from './scrollToBlock.js';
 import { initSounds } from './playSound.js';
 import { initRundomColorSelect } from './rundomColor.js';
 import { initPrint } from './print.js';
-import { setupStikySidebarEvents, initStikySidebar, initSidebarPopups } from './stiky-sidebar.js';
+import { initSidebarPopups, initStikySidebar } from './stiky-sidebar.js';
 import { popup } from './popup.js';
 import { saveAnswerToSession, getTestResult, renderResults } from './test.js';
 import { generatePDF, printPlay } from './stage.js';
@@ -27,7 +27,6 @@ initTabs();
 initSounds();
 initRundomColorSelect();
 initPrint();
-setupStikySidebarEvents();
 initStikySidebar();
 popup.init();
 initSidebarPopups();
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!stageSlider) return;
 
   stageSlider.on('slideChange', () => {
-    const index = stageSlider.activeIndex; // Берём реальный DOM slide
+    const index = stageSlider.activeIndex;
     const slideEl = stageSlider.slides[index];
     const number = slideEl?.dataset?.number;
     if (number) {
