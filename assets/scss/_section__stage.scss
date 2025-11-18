@@ -12,7 +12,7 @@
   .description {
     .title {
       text-align: left;
-      @media (max-width: 599px) {
+      @media (max-width: 1023px) {
         text-align: center;
       }
     }
@@ -76,9 +76,14 @@
   bottom: 82px;
   width: myclamp(560px, 786px, 1440px, 2560px);
   height: myclamp(409px, 575px, 1440px, 2560px);
+  max-height: 90svh;
+  min-height: 60svh;
   background: url('../img/circle.webp') no-repeat center center/cover;
   @media (max-width: 767px) {
     bottom: 50px;
+  }
+  @media (orientation: portrait) {
+    min-width: 100%;
   }
 }
 
@@ -198,6 +203,53 @@
 
   &.character--6_1 {
     width: myclamp(280px, 450px, 1440px, 2560px);
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
+    &.character--1_1 {
+      width: myclamp(147px, 252px, 1440px, 2560px);
+      z-index: 2;
+    }
+    &.character--1_2 {
+      width: myclamp(281px, 281px, 1440px, 2560px);
+    }
+    &.character--1_3 {
+      width: myclamp(296px, 296px, 1440px, 2560px);
+    }
+
+    &.character--2_1 {
+      width: myclamp(230px, 230px, 1440px, 2560px);
+    }
+
+    &.character--3_1 {
+      width: myclamp(182px, 182px, 1440px, 2560px);
+    }
+    &.character--3_2 {
+      width: myclamp(300px, 300px, 1440px, 2560px);
+    }
+    &.character--3_3 {
+      width: myclamp(192px, 192px, 1440px, 2560px);
+    }
+
+    &.character--4_1 {
+      width: myclamp(240px, 240px, 1440px, 2560px);
+      z-index: 2;
+    }
+    &.character--4_2 {
+      width: myclamp(500px, 500px, 1440px, 2560px);
+    }
+
+    &.character--5_1 {
+      width: myclamp(210px, 210px, 1440px, 2560px);
+      z-index: 2;
+    }
+    &.character--5_2 {
+      width: myclamp(250px, 250px, 1440px, 2560px);
+    }
+
+    &.character--6_1 {
+      width: myclamp(450px, 450px, 1440px, 2560px);
+    }
   }
 }
 

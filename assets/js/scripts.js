@@ -8,7 +8,10 @@ import { initPrint } from './print.js';
 import { setupStikySidebarEvents, initStikySidebar, initSidebarPopups } from './stiky-sidebar.js';
 import { popup } from './popup.js';
 import { saveAnswerToSession, getTestResult, renderResults } from './test.js';
+import { generatePDF, printPlay } from './stage.js';
 
+window.printPlay = printPlay;
+window.generatePDF = generatePDF;
 window.saveAnswerToSession = saveAnswerToSession;
 window.getTestResult = getTestResult;
 window.renderResults = renderResults;

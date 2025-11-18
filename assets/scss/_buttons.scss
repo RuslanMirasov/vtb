@@ -110,6 +110,7 @@
   border-radius: myclamp(10px, 10px, 1440px, 2560px);
   text-align: left;
   font-size: myclamp(18px, 18px, 1440px, 2560px);
+  line-height: 1;
   font-weight: 600;
   &:before {
     content: '';

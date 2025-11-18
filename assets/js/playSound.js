@@ -8,10 +8,10 @@ export const initSounds = () => {
 
   // ---------- ПРЕДЗАГРУЗКА ----------
   soundButtons.forEach(btn => {
-    const rawSrc = btn.dataset.soundSrc;
+      const rawSrc = btn.dataset.soundSrc;
     if (!rawSrc) return;
 
-    const src = new URL(rawSrc, window.location.href).href;
+      const src = new URL(rawSrc, window.location.href).href;
 
     if (!audioCache.has(src)) {
       const audio = new Audio(src);

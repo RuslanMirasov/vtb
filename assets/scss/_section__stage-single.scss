@@ -139,6 +139,15 @@
     align-self: flex-start;
     text-align: left;
     padding: 4px 8px;
+    span {
+      display: inline-flex;
+      width: auto;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 4px;
+    }
   }
 
   i {
@@ -157,7 +166,8 @@
     padding: 20px myclamp(24px, 40px, 1440px, 2560px);
 
     span {
-      display: flex;
+      display: inline-flex;
+      width: auto;
       position: relative;
       justify-content: center;
       align-items: center;
